@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://unpkg.com/vue/dist/vue.global.prod.js"></script>
+        <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.global.prod.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+        <title>ElCapitan</title>
+    </head>
+
+    <body>
+        <div id="app" class="app">
+            <nav>
+                <img src="../media/mountain.png" alt="">
+                <a href="#about">{{ t('navb1') }}</a>
+                <a href="#projects">{{ t('navb2') }}</a>
+                <a href="#links">{{ t('navb3') }}</a>
+
+                <select id="language-selector" v-model="locale">
+                    <option value="en">EN</option>
+                    <option value="ua">UA</option>
+                    <option value="jp">JP</option>
+                </select>
+            </nav>
+
+            <header id="header">
+                <div class="hello-world">
+                    {{ t("hello1") }}<br>
+                    <span style="color: rgb(255, 243, 138);">{{ t("hello_name") }}</span><br>
+                    <span id="typing"></span>
+                </div>
+
+                <div class="info-card">
+                    {{ t("infocard") }}
+                </div>
+
+                <img class="header-image" src="../media/img1.jpg" alt="">
+            </header>
+
+            <main id="content">
+                <a href="#content" id="scroll-arrow" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
+                <div class="fade-bottom"></div>
+
+                <div class="quoter">
+                    <div class="gradient"></div>
+                    <div class="quoter-header">
+                        {{ t('quoter_header') }} <u>{{ t('quoter_header2') }}</u>
+                    </div>
+                    
+                    <div class="quote">
+                        <div class="text-block">
+                            <div class="symbol">"</div>
+                            <div>{{ t('quote1') }}</div>
+                        </div>
+                        <div class="author">{{ t('author1') }}</div>
+                    </div>
+                    
+                    <div class="quote">
+                        <div class="text-block">
+                            <div class="symbol">"</div>
+                            <div>{{ t('quote2') }}</div>
+                        </div>
+                        <div class="author">{{ t('author2') }}</div>
+                    </div>
+                    
+                    <div class="quote">
+                        <div class="text-block">
+                            <div class="symbol">"</div>
+                            <div>{{ t('quote3') }}</div>
+                        </div>
+                        <div class="author">{{ t('author3') }}</div>
+                    </div>
+                </div>
+
+                <p id="links"></p>
+            </main>
+        </div>
+
+        <script src="js/app.js"></script>
+        <script>
+            const scroll = new SmoothScroll('a[href*="#"]', {
+              speed: 800,
+              speedAsDuration: true
+            });
+
+            const arrow = document.getElementById('scroll-arrow');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    arrow.href = "#header"
+                    arrow.classList.add('rotate');
+                    return;
+                }
+                
+                arrow.href = "#content"
+                arrow.classList.remove('rotate');
+            });
+        </script>
+    </body>
+</html>
