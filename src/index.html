@@ -17,69 +17,97 @@
 
     <body>
         <div id="app" class="app">
-            <nav>
-                <img src="../media/mountain.png" alt="">
-                <a href="#about">{{ t('navb1') }}</a>
-                <a href="#projects">{{ t('navb2') }}</a>
-                <a href="#links">{{ t('navb3') }}</a>
+            <nav id="nav">
+                <img src="./media/mountain.png" alt="">
+                <a href="#about">{{ t('nav.buttons.1') }}</a>
+                <a href="#projects">{{ t('nav.buttons.2') }}</a>
+                <a href="#links">{{ t('nav.buttons.3') }}</a>
 
                 <select id="language-selector" v-model="locale">
                     <option value="en">EN</option>
                     <option value="ua">UA</option>
                     <option value="jp">JP</option>
                 </select>
+
+                <a href="#header" id="nav-scroll-arrow" class="arrow-down rotate"><i class="fas fa-chevron-down"></i></a>
             </nav>
 
             <header id="header">
                 <div class="hello-world">
-                    {{ t("hello1") }}<br>
-                    <span style="color: rgb(255, 243, 138);">{{ t("hello_name") }}</span><br>
+                    {{ t("hello.parts.1") }}<br>
+                    <span style="color: rgb(255, 243, 138);">{{ t("hello.parts.name") }}</span><br>
                     <span id="typing"></span>
                 </div>
 
                 <div class="info-card">
-                    {{ t("infocard") }}
+                    {{ t("hello.infocard") }}
                 </div>
-
-                <img class="header-image" src="../media/img1.jpg" alt="">
             </header>
 
             <main id="content">
                 <a href="#content" id="scroll-arrow" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
-                <div class="fade-bottom"></div>
 
                 <div class="quoter">
-                    <div class="gradient"></div>
                     <div class="quoter-header">
-                        {{ t('quoter_header') }} <u>{{ t('quoter_header2') }}</u>
+                        {{ t('quoter.header1') }} <u>{{ t('quoter.header2') }}</u>
                     </div>
                     
                     <div class="quote">
                         <div class="text-block">
                             <div class="symbol">"</div>
-                            <div>{{ t('quote1') }}</div>
+                            <div>{{ t('quoter.quotes.1.text') }}</div>
                         </div>
-                        <div class="author">{{ t('author1') }}</div>
+                        <div class="author">{{ t('quoter.quotes.1.author') }}</div>
                     </div>
-                    
+                      
                     <div class="quote">
                         <div class="text-block">
                             <div class="symbol">"</div>
-                            <div>{{ t('quote2') }}</div>
+                            <div>{{ t('quoter.quotes.2.text') }}</div>
                         </div>
-                        <div class="author">{{ t('author2') }}</div>
+                        <div class="author">{{ t('quoter.quotes.2.author') }}</div>
                     </div>
-                    
+
+                    <div class="quote">
+                        <div class="text-block">
+                             <div class="symbol">"</div>
+                            <div>{{ t('quoter.quotes.3.text') }}</div>
+                        </div>
+                        <div class="author">{{ t('quoter.quotes.3.author') }}</div>
+                    </div>
+
+                    <div class="quote">
+                        <div class="text-block">
+                             <div class="symbol">"</div>
+                            <div>{{ t('quoter.quotes.4.text') }}</div>
+                        </div>
+                        <div class="author">{{ t('quoter.quotes.4.author') }}</div>
+                    </div>
+
                     <div class="quote">
                         <div class="text-block">
                             <div class="symbol">"</div>
-                            <div>{{ t('quote3') }}</div>
+                            <div>{{ t('quoter.quotes.5.text') }}</div>
                         </div>
-                        <div class="author">{{ t('author3') }}</div>
+                        <div class="author">{{ t('quoter.quotes.5.author') }}</div>
                     </div>
                 </div>
 
-                <p id="links"></p>
+                <div class="about-block" id="about">
+                    <div class="about">
+                        <div class="header">
+                            {{ t("about.header") }}
+                        </div>
+
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere at ex in pretium. Aliquam pellentesque ultricies purus, non blandit augue blandit vitae. Ut quam augue, dictum eu sapien a, auctor vestibulum urna. Etiam laoreet nunc nisl, id scelerisque metus faucibus a. Donec metus leo, euismod pellentesque odio gravida, tincidunt convallis risus. Phasellus accumsan felis turpis. Fusce id quam euismod, ullamcorper ligula vitae, lacinia nibh. Cras quis congue massa. Cras nunc lectus, pellentesque non convallis sit amet, congue vehicula dolor. Vivamus aliquam odio sed urna mattis ultricies. Nulla facilisi. Sed quis luctus felis. 
+                        </div>
+
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere at ex in pretium. Aliquam pellentesque ultricies purus, non blandit augue blandit vitae. Ut quam augue, dictum eu sapien a, auctor vestibulum urna. Etiam laoreet nunc nisl, id scelerisque metus faucibus a. Donec metus leo, euismod pellentesque odio gravida, tincidunt convallis risus. Phasellus accumsan felis turpis. Fusce id quam euismod, ullamcorper ligula vitae, lacinia nibh. Cras quis congue massa. Cras nunc lectus, pellentesque non convallis sit amet, congue vehicula dolor. Vivamus aliquam odio sed urna mattis ultricies. Nulla facilisi. Sed quis luctus felis. 
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
 
@@ -89,18 +117,41 @@
               speed: 800,
               speedAsDuration: true
             });
-
+            
+            const navscroll = document.getElementById('nav-scroll-arrow')
             const arrow = document.getElementById('scroll-arrow');
+            const header = document.getElementById('header');
+            const about = document.getElementById('about');
+            const nav = document.getElementById('nav');
 
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 10) {
-                    arrow.href = "#header"
-                    arrow.classList.add('rotate');
-                    return;
+                const currentScrollTop = window.scrollY;
+
+                if (window.scrollY > window.innerHeight) {
+                    header.style.display = 'none';
+                } else {
+                    header.style.display = 'flex';
                 }
                 
-                arrow.href = "#content"
-                arrow.classList.remove('rotate');
+                if (about.getBoundingClientRect().y <= 10) {
+                    nav.classList.add("white");
+                } else {
+                    nav.classList.remove("white");
+                }
+
+                if (arrow.getBoundingClientRect().y <= 10) {
+                    navscroll.style.display = 'inherit';
+                } else {
+                    navscroll.style.display = 'none';
+                }
+
+                if (window.scrollY > 10) {
+                    arrow.href = "#header";
+                    arrow.classList.add('rotate');
+                } else {
+                    arrow.href = "#content";
+                    arrow.classList.remove('rotate');
+                }
             });
         </script>
     </body>
