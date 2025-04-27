@@ -5,7 +5,7 @@ const messages = {
     en: {
         nav : {
             buttons : {
-                1: "About",
+                1: "About Me",
                 2: "Projects",
                 3: "Links"
             }
@@ -14,8 +14,8 @@ const messages = {
            parts: {
                 1: "Hi, I'm",
                 2: "Guitarist",
-                3: "Dreamer",
-                4: "Programmer",
+                3: "Programmer",
+                4: "ElCapitan",
                 name: "Vladislav"
            },
             infocard: "USA, Yosemite National Park, El Capitan Mountain",
@@ -47,7 +47,12 @@ const messages = {
             }
         },
         about: {
-            header: "About me"
+            header: "About me",
+            textblocks: {
+                1: "I'm a programmer with over six years of experience in the field. I have been actively developing software since 2018 through pet projects. Some of them are systems for automating the installation of Linux OS, websites, and integrated with security systems Telegram bots, that send notifications about their status.",
+                2: "Currently, I work as a System Administrator at a company, where I apply my knowledge and skills in practice. Alongside this, I continue my evaluation, learning new technologies in software development, and aim to become a programmer.",
+                3: "In free time, I learn to play the guitar, work on pet projects, and travel around my home country."
+            }
         }
     },
     ua: { 
@@ -62,8 +67,8 @@ const messages = {
         parts: {
                 1: "Привіт, я",
                 2: "Гітарист",
-                3: "Мрійник",
-                4: "Програміст",
+                3: "Програміст",
+                4: "Ель-Капітан",
               name: "Владислав"
         },
             infocard: "США, Національний парк Йосеміті, гора Ель-Капітан"
@@ -72,30 +77,35 @@ const messages = {
             header1: "Улюблені",
             header2: "цитати",
             quotes: {
-            1: {
-                text: "Ми — сума всіх наших вчинків, порятунок всередині нас.",
-                author: "Alek OS, ютубер"
-              },
-            2: {
-                text: "Якщо хочете зробити щось надзвичайне, щось значно більше за передбачуване — потрібні надзвичайні умови.",
-                author: "Андрій Доронічев, розробник"
-              },
-            3: {
-                text: "Будь-яке надто загальне твердження в біології є хибним, включно з цим.",
-                author: "Олександр Панчин, вчений"
-              },
-            4: {
-                text: "Навіть якщо ви народилися й виросли в маленькому містечку, у вас завжди є шанс дістатися самого верху.",
-                author: "Юрій Дудь, журналіст"
-              },
-            5: {
-                text: "У чому сила? В умінні бачити об'єктивну реальність, боротися за правду, відділяти її від наносного. Зрештою, так, сила у правді. І у вірі, що правда існує та може бути встановлена.",
-                author: "Леонід Волков, директор ФБК"
-            }
+                1: {
+                    text: "Ми — сума всіх наших вчинків, порятунок всередині нас.",
+                    author: "Alek OS, ютубер"
+                },
+                2: {
+                    text: "Якщо хочете зробити щось надзвичайне, щось значно більше за передбачуване — потрібні надзвичайні умови.",
+                    author: "Андрій Доронічев, розробник ПЗ"
+                },
+                3: {
+                    text: "Будь-яке надто загальне твердження в біології завідомо хибне, включно з цим.",
+                    author: "Олександр Панчин, вчений"
+                },
+                4: {
+                    text: "Навіть якщо ви народилися й виросли у маленькому містечку, у вас завжди є шанс дістатися самого верху.",
+                    author: "Юрій Дудь, журналіст"
+                },
+                5: {
+                    text: "У чому сила? В умінні бачити об'єктивну реальність, боротися за правду, відділяти її від наносного. Зрештою, так, сила у правді. І у вірі, що правда існує та може бути встановлена.",
+                    author: "Леонід Волков, директор ФБК"
+                }
             }
         },
         about: {
-            header: "Про мене"
+            header: "Про мене",
+            textblocks: {
+                1: "Программіст з досвідом роботи у сфері більше шести років. Займаюсь активною розробкою ПЗ з 2018 року у форматі пет-проєктів. Серед них системи автоматизації установки ОС Linux, телеграм боти, що інтегруються с системами безпеки для відправки повідомленнь про стан та вебсайти.",
+                2: "Наразі працюю на посаді Системного Адміністратора в компанії, на практиці застосвую отримані знання та навички. Поряд з цим не зупиняю особистісний розвиток, продовжую вивчати нові технології у сфері розробки ПЗ та прагну отримати посаду програміста у майбутньому.",
+                3: "У вільний час навчаюсь грати на гітарі, роблю пет-проєкти та подорожую рідною країною."
+            }
         }
     },
     jp: {

@@ -56,6 +56,7 @@ nav {
     }
 
     select {
+        font-size: 16px;
         position: absolute;
         right: 30px;
         background-color: transparent;
@@ -70,6 +71,34 @@ nav {
         position: absolute;
         left: 50%;
         transform: translateX(-70%) rotate(180deg);
+    }
+
+    @media (max-width: 1000px) {
+        justify-content: center;
+
+        img {
+            position: absolute;
+            left: 10px;
+        }
+
+        a {
+            transform: translateX(-25%);
+        }
+
+        .arrow-down {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        a {
+            font-size: 15px;
+        }
+
+        select {
+            font-size: 15px;
+            right: 20px;
+        }
     }
 }
 
@@ -129,6 +158,19 @@ header {
         width: 100%;
         height: 100vh;
         object-fit: cover;
+    }
+
+    @media (max-width: 1000px) {
+        align-items: center;
+
+        .hello-world {
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .info-card {
+            right: unset;
+        }
     }
 }
 
@@ -205,6 +247,30 @@ main {
             bottom: 10px;
         }
     }
+
+    @media (max-width: 1000px) {
+        .quote {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .quote {
+            width: 70%;
+            font-size: 24px;
+
+            .text-block {
+                .symbol {
+                    font-size: 30px;
+                }
+            }
+
+            .author {
+                font-size: 20px;
+                right: 20px;
+            }
+        }
+    }
 }
 
 
@@ -245,6 +311,22 @@ main {
         }
     }
     
+    @media (max-width: 1200px) {
+        .about {
+            transform: unset;
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .about {
+            border-radius: 0;
+            width: 100%;
+        }
+    }
 }
 
 @keyframes fadeIn {
