@@ -52,7 +52,22 @@ const messages = {
                 1: "I'm a programmer with over six years of experience in the field. I have been actively developing software since 2018 through pet projects. Some of them are systems for automating the installation of Linux OS, websites, and integrated with security systems Telegram bots, that send notifications about their status.",
                 2: "Currently, I work as a System Administrator at a company, where I apply my knowledge and skills in practice. Alongside this, I continue my evaluation, learning new technologies in software development, and aim to become a programmer.",
                 3: "In free time, I learn to play the guitar, work on pet projects, and travel around my home country."
+            },
+            lang : {
+                header : "Language skills",
+                2: {
+                    name: "English"
+                },
+                1: {
+                    name: "Ukrainian"
+                },
+                3: {
+                    name: "Japaneese"
+                }
             }
+        },
+        skills: {
+            header : "Programming skills"
         }
     },
     ua: { 

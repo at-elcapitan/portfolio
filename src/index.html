@@ -66,7 +66,7 @@
                         {{ t('quoter.header1') }} <u>{{ t('quoter.header2') }}</u>
                     </div>
                     
-                    <div class="quote">
+                    <div class="quote slide">
                         <div class="text-block">
                             <div class="symbol">"</div>
                             <div>{{ t('quoter.quotes.1.text') }}</div>
@@ -74,7 +74,7 @@
                         <div class="author">{{ t('quoter.quotes.1.author') }}</div>
                     </div>
                       
-                    <div class="quote">
+                    <div class="quote slide">
                         <div class="text-block">
                             <div class="symbol">"</div>
                             <div>{{ t('quoter.quotes.2.text') }}</div>
@@ -82,7 +82,7 @@
                         <div class="author">{{ t('quoter.quotes.2.author') }}</div>
                     </div>
 
-                    <div class="quote">
+                    <div class="quote slide">
                         <div class="text-block">
                              <div class="symbol">"</div>
                             <div>{{ t('quoter.quotes.3.text') }}</div>
@@ -90,7 +90,7 @@
                         <div class="author">{{ t('quoter.quotes.3.author') }}</div>
                     </div>
 
-                    <div class="quote">
+                    <div class="quote slide">
                         <div class="text-block">
                              <div class="symbol">"</div>
                             <div>{{ t('quoter.quotes.4.text') }}</div>
@@ -98,7 +98,7 @@
                         <div class="author">{{ t('quoter.quotes.4.author') }}</div>
                     </div>
 
-                    <div class="quote">
+                    <div class="quote slide">
                         <div class="text-block">
                             <div class="symbol">"</div>
                             <div>{{ t('quoter.quotes.5.text') }}</div>
@@ -106,34 +106,71 @@
                         <div class="author">{{ t('quoter.quotes.5.author') }}</div>
                     </div>
                 </div>
+                
+                <div class="self-section">
+                    <div class="about-block" id="about">
+                        <div class="about slide">
+                            <div class="header">
+                                {{ t("about.header") }}
+                            </div>
 
-                <div class="about-block" id="about">
-                    <div class="about">
-                        <div class="header">
-                            {{ t("about.header") }}
-                        </div>
+                            <div class="text">
+                                {{ t("about.textblocks.1") }}
+                            </div>
 
-                        <div class="text">
-                            {{ t("about.textblocks.1") }}
-                        </div>
+                            <div class="text">
+                                {{ t("about.textblocks.2") }}
+                            </div>
 
-                        <div class="text">
-                            {{ t("about.textblocks.2") }}
-                        </div>
+                            <div class="text">
+                                {{ t("about.textblocks.3") }}
+                            </div>
 
-                        <div class="text">
-                            {{ t("about.textblocks.3") }}
+                            <div class="header">
+                                {{ t("about.lang.header") }}
+                            </div>
+
+                            <div class="languages">
+                                <div class="language">
+                                    <div class="lang-name">{{ t("about.lang.1.name") }}</div>
+
+                                    <div class="level">
+                                        <div class="name p5 slide">C1</div>
+                                    </div>
+
+                                    <div class="progress p5 yellow slide"></div>
+                                </div>
+
+                                <div class="language">
+                                    <div class="lang-name">{{ t("about.lang.2.name") }}</div>
+
+                                    <div class="level">
+                                        <div class="name p4 slide">B2</div>
+                                    </div>
+
+                                    <div class="progress p4 red slide"></div>
+                                </div>
+
+                                <div class="language">
+                                    <div class="lang-name">{{ t("about.lang.3.name") }}</div>
+
+                                    <div class="level">
+                                        <div class="name p1 slide">A1</div>
+                                    </div>
+
+                                    <div class="progress p1 gunjyou slide"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
             </main>
         </div>
 
         <script src="js/app.js"></script>
         <script>
             const scroll = new SmoothScroll('a[href*="#"]', {
-              speed: 800,
-              speedAsDuration: true
+                speed: 800,
+                speedAsDuration: true
             });
             
             const navscroll = document.getElementById('nav-scroll-arrow')
@@ -170,6 +207,19 @@
                     arrow.href = "#content";
                     arrow.classList.remove('rotate');
                 }
+            });
+
+            const observer = new IntersectionObserver((objects) => {
+                objects.forEach(object => {
+                    if (object.isIntersecting) {
+                        object.target.classList.add('visible');
+                        observer.unobserve(object.target);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.slide').forEach(object => {
+                observer.observe(object);
             });
         </script>
     </body>
