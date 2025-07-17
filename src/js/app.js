@@ -6,7 +6,7 @@ const messages = {
         nav : {
             buttons : {
                 1: "About Me",
-                2: "Projects",
+                2: "Knowledge",
                 3: "Links"
             }
         },
@@ -64,17 +64,39 @@ const messages = {
                 3: {
                     name: "Japaneese"
                 }
+            },
+            skills: {
+                learning: {
+                    title: "Learning",
+                    1: "Powerfull business-oriented language",
+                    2: "Another Python Framework for creating dynamic sites",
+                    3: "Powerfull frontend framework for JavaScript"
+                },
+                learned: {
+                    title: "Knowledge",
+                    1: "Powerfull scripting language",
+                    2: "Python Framework for creating dynamic websites",
+                    3: "Python Framework for creating REST API backends",
+                    4: "One of the oldest low-lever programming languages",
+                    5: "Powerfull JavaScript frontend framework",
+                    6: "The most popular version control system"
+                }
             }
         },
-        skills: {
-            header : "Programming skills"
+        footer: {
+            title: {
+                1: "Credits",
+                2: "Latest Projects",
+                3: "This Project",
+                4: "Contact"
+            }
         }
     },
     ua: { 
         nav: {
             buttons: {
                 1: "Про мене",
-                2: "Мої проєкти",
+                2: "Мої знання",
                 3: "Посилання"
             }
         },
@@ -120,6 +142,31 @@ const messages = {
                 1: "Программіст з досвідом роботи у сфері більше шести років. Займаюсь активною розробкою ПЗ з 2018 року у форматі пет-проєктів. Серед них системи автоматизації установки ОС Linux, телеграм боти, що інтегруються с системами безпеки для відправки повідомленнь про стан та вебсайти.",
                 2: "Наразі працюю на посаді Системного Адміністратора в компанії, на практиці застосвую отримані знання та навички. Поряд з цим не зупиняю особистісний розвиток, продовжую вивчати нові технології у сфері розробки ПЗ та прагну отримати посаду програміста у майбутньому.",
                 3: "У вільний час навчаюсь грати на гітарі, роблю пет-проєкти та подорожую рідною країною."
+            },
+            skills: {
+                learning: {
+                    title: "Вивчаю",
+                    1: "Потужна бізнес-орієнтована мова",
+                    2: "Ще один фреймворк Python для створення динамічних сайтів",
+                    3: "Потужний інтерфейсний фреймворк для JavaScript"
+                },
+                learned: {
+                    title: "Навички",
+                    1: "Потужна мова сценаріїв",
+                    2: "Фреймворк Python для створення динамічних веб-сайтів",
+                    3: "Фреймворк Python для створення REST API бекендів",
+                    4: "Одна з найстаріших низькорівневих мов програмування",
+                    5: "Потужний інтерфейсний фреймворк JavaScript",
+                    6: "Найпопулярніша система контролю версій"
+                }
+            }
+        },
+        footer: {
+            title: {
+                1: "Посилання на матеріали",
+                2: "Останні проєкти",
+                3: "Цей проєкт",
+                4: "Контакти"
             }
         }
     },
@@ -147,6 +194,8 @@ const app = createApp({
     setup() {
         const { t, locale } = useI18n();
         const typedInstance = ref(null);
+        const error = ref(null);
+        const repos = ref([]);
 
         function startTyping() {
             if (typedInstance.value) {
@@ -173,11 +222,19 @@ const app = createApp({
             startTyping();
         });
 
-        onMounted(() => {
+        onMounted(async () => {
             startTyping();
+            try {
+                const res = await fetch(`https://api.github.com/users/at-elcapitan/repos?sort=updated&per_page=5`);
+                if(!res.ok) throw new Error('Unable to fetch repositories');
+                const data = await res.json();
+                repos.value = data;
+            } catch (err) {
+                error.value = err.message;
+            }
         });
 
-        return { locale, t };
+        return { locale, t, repos, error };
     }
 });
 

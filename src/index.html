@@ -34,7 +34,7 @@
             <nav id="nav">
                 <img src="./media/mountain.png" alt="">
                 <a href="#about">{{ t('nav.buttons.1') }}</a>
-                <a href="#projects">{{ t('nav.buttons.2') }}</a>
+                <a href="#skills">{{ t('nav.buttons.2') }}</a>
                 <a href="#links">{{ t('nav.buttons.3') }}</a>
 
                 <select id="language-selector" v-model="locale">
@@ -163,6 +163,123 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="skills slide" id="skills">
+                        <div class="title">{{ t("about.skills.learned.title") }}</div>
+                        
+                        <div class="card-block">
+                            <div class="card slide">
+                                <div class="icon"><img src="media/python-logo.webp" alt="" srcset=""></div>
+                                <div class="name">Python</div>
+                                <div class="description">{{ t("about.skills.learned.1") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img class="white" src="media/flask.png" alt="" srcset=""></div>
+                                <div class="name">Flask</div>
+                                <div class="description">{{ t("about.skills.learned.2") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img src="media/fastapi.svg" alt="" srcset=""></div>
+                                <div class="name">FastAPI</div>
+                                <div class="description">{{ t("about.skills.learned.3") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img class="white" src="media/c.svg" alt="" srcset=""></div>
+                                <div class="name">C (Programming Language)</div>
+                                <div class="description">{{ t("about.skills.learned.4") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img class="white scale" src="media/vue.png" alt="" srcset=""></div>
+                                <div class="name">Vue.js</div>
+                                <div class="description">{{ t("about.skills.learned.5") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img class="white" src="media/git.png" alt="" srcset=""></div>
+                                <div class="name">Git</div>
+                                <div class="description">{{ t("about.skills.learned.6") }}</div>
+                            </div>
+                        </div>
+
+                        <div class="title">{{ t("about.skills.learning.title") }}</div>
+
+                        <div class="card-block">
+                            <div class="card slide">
+                                <div class="icon"><img class="white pad" src="media/java.png" alt="" srcset=""></div>
+                                <div class="name">Java</div>
+                                <div class="description">{{ t("about.skills.learning.1") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img src="media/django.svg" alt="" srcset=""></div>
+                                <div class="name">Django</div>
+                                <div class="description">{{ t("about.skills.learning.2") }}</div>
+                            </div>
+
+                            <div class="card slide">
+                                <div class="icon"><img class="white pad" src="media/react.svg" alt="" srcset=""></div>
+                                <div class="name">React.js</div>
+                                <div class="description">{{ t("about.skills.learning.3") }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer id="links">
+                    <div class="categories-block">
+                        <div class="category">
+                            <div class="name">{{ t("footer.title.1") }}</div>
+                            <a class="item" href="https://vuejs.org/" target="_blank"><img src="media/link.png">Vue.js Framework</a>
+                            <a class="item" href="https://www.i18next.com/" target="_blank"><img src="media/link.png">i18n Framework</a>
+                            <a class="item" href="https://www.flaticon.com/free-icon/github-logo_25231" target="_blank"><img src="media/link.png">GitHub Icon</a>
+                            <a class="item" href="https://www.flaticon.com/free-icon/java_226777" target="_blank"><img src="media/link.png">Java Icon</a>
+                            <a class="item" target="_blank" href="https://icons8.com/icon/mfkStOwP4EC0/c-programming"><img src="media/link.png">C Programming icon by Icons8</a>
+                            <a class="item" href="https://www.flaticon.com/free-icon/mail_646094" target="_blank"><img src="media/link.png">Mail Icon</a>
+                            <a class="item" href="https://www.pexels.com/photo/silhouetted-mountains-in-yosemite-national-park-14028270/" target="_blank"><img src="media/link.png">El Capitan Photo</a>
+                            <a class="item" href="https://commons.wikimedia.org/wiki/File:Tunnel_View_2,_Yosemite_Valley,_Yosemite_NP_-_Diliff.jpg" target="_blank"><img src="media/link.png">El Capitan Photo</a>
+                            <a class="item" href="https://www.behance.net/gallery/223317883/Folies-Bergere-font" target="_blank"><img src="media/link.png">Folies Bergere Font</a>
+                            <a class="item" href="https://www.flaticon.com/free-icon/mountains_672710" target="_blank"><img src="media/link.png">Site Icon</a>
+                        </div>
+                        
+                        <div class="categories-column">
+                            <div class="category" v-if="repos.length">
+                                <div class="name">{{ t("footer.title.2") }}</div>
+                                <div class="items" v-for="repo in repos">
+                                    <a class="item" :href="repo.html_url" target="_blank"><img src="media/github-logo.png">{{ repo.name }}</a>
+                                </div>
+                            </div>
+                            <div class="category" v-else-if="error">
+                                <div class="name">Unable to fetch repositories, 0e1</div>
+                            </div>
+                            <div class="category" v-else>
+                                <div class="name">Fetching repositories...</div>
+                            </div>
+
+                            <div class="category">
+                                <div class="name">{{ t("footer.title.3") }}</div>
+                                <a class="item" href="https://gitea.atproject.com.ua/elcapitan/about-me" target="_blank"><img src="media/gitea.png">Repository</a>
+                            </div>
+                        </div>
+        
+                        <div class="category">
+                            <div class="name">{{ t("footer.title.4") }}</div>
+                            <a class="item" href="https://x.com/vladelcapitan" target="_blank"><img src="media/x.png">vladelcapitan</a>
+                            <a class="item" href="https://github.com/at-elcapitan" target="_blank"><img src="media/github-logo.png">at-elcapitan</a>
+                            <a class="item" href="https://gitea.atproject.com.ua/elcapitan" target="_blank"><img src="media/gitea.png">elcapitan</a>
+                            <a class="item" href="mailto:elcapitan@atproject.com.ua" target="_blank"><img src="media/mail.png">elcapitan@atproject.com.ua</a>
+                        </div>
+                    </div>
+                        
+                    <hr>
+        
+                    <div class="copyright">
+                        © Vladislav "ElCapitan" Nazarov, 2025<br><br>The future is in our hands
+                    </div>
+                </footer>
             </main>
         </div>
 
