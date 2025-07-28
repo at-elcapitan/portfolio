@@ -296,14 +296,16 @@ main {
     align-items: center;
 
     .about-block {
-        height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        height: max-content;
         display: flex;
         justify-content: center;
         align-items: center;
 
         .about {
             padding: 20px;
-            background-color: rgba(88, 92, 84, 0.658);
+            background-color: rgba(84, 84, 84, 0.506);
             backdrop-filter: blur(5px);
             border-radius: 15px;
             width: 40%;
@@ -463,16 +465,68 @@ main {
         border-radius: 15px;
         padding-top: 30px;
         padding-bottom: 30px;
+        overflow: hidden;
+
+        .button-block {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            button {
+                border: none;
+                background-color: transparent;
+                color: white;
+                font-size: 28px;
+                transition: all 200ms;
+
+                &.selected {
+                    border-bottom: 2px solid white !important;
+                }
+
+                &:hover {
+                    filter: invert(0.2);
+                }
+            }
+        }
 
         .title {
-            font-size: 40px;
+            font-size: 32px;
             border-bottom: 4px solid white
+        }
+
+        .slide-wrapper {
+            display: flex;
+            gap: 100px;
+            transition: all 500ms;
+        }
+
+        .slide-block {
+            opacity: 0;
+            display: none;
+            flex-direction: column;
+            gap: 40px;
+            min-width: 100%;
+            animation: fadeIn ease 1s forwards;
         }
 
         .card-block {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
             gap: 100px;
+            transition: all 200ms;
+
+            &.grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &.grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &.grid-1 {
+                grid-template-columns: repeat(1, 1fr);
+            }
 
             .card {
                 display: flex;
@@ -494,6 +548,55 @@ main {
                 .description {
                     text-align: center;
                     font-size: 18px;
+                }
+
+                .experience {
+                    display: flex;
+                    flex-direction: column;
+                    border-top: 1px solid rgb(175, 175, 175);
+                    width: 90%;
+                    padding-top: 20px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    .text {
+                        text-align: center;
+                    }
+
+                    .projects {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+
+                        .project {
+                            padding: 5px;
+                            border-radius: 10px;
+                            filter: invert(1);
+                            transition: all 200ms;
+                            display: flex;
+                            gap: 10px;
+                            text-align: right;
+                            width: fit-content;
+                            border: 1px solid black;
+                            color: black;
+                            text-decoration: none;
+
+                            .text {
+                                transform: translateY(20%);
+                                text-align: center;
+                            }
+
+                            img {
+                                width: 25px;
+                            }
+
+                            &:hover {
+                                filter: invert(0.8);
+                            }
+                        }
+                    }
                 }
     
                 .icon img {
