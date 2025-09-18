@@ -65,7 +65,7 @@
                         {{ t('quoter.header1') }} <u>{{ t('quoter.header2') }}</u>
                     </div>
                     
-                    <div class="quote slide">
+                    <div class="quote slide active">
                         <div class="text-block">
                             <div class="symbol">"</div>
                             <div>{{ t('quoter.quotes.1.text') }}</div>
@@ -491,8 +491,8 @@
                 speed: 800,
                 speedAsDuration: true
             });
-            
-            const navscroll = document.getElementById('nav-scroll-arrow')
+
+            const navscroll = document.getElementById('nav-scroll-arrow');
             const arrow = document.getElementById('scroll-arrow');
             const header = document.getElementById('header');
             const about = document.getElementById('about');
@@ -529,6 +529,29 @@
                 } else {
                     arrow.href = "#content";
                     arrow.classList.remove('rotate');
+                }
+
+                // 🔥 Определяем ближайший .quote к центру экрана
+                const quotes = document.querySelectorAll('.quote');
+                const center = window.innerHeight / 2;
+
+                let closestQuote = null;
+                let closestDistance = Infinity;
+
+                quotes.forEach(quote => {
+                    const rect = quote.getBoundingClientRect();
+                    const quoteCenter = rect.top + rect.height / 2;
+                    const distance = Math.abs(quoteCenter - center);
+
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestQuote = quote;
+                    }
+                });
+
+                quotes.forEach(quote => quote.classList.remove('active'));
+                if (closestQuote) {
+                    closestQuote.classList.add('active');
                 }
             });
 
