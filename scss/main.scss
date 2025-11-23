@@ -35,7 +35,7 @@ nav {
     display: flex;
     align-items: center;
     padding-left: 15px;
-    gap: 20px;
+    gap: 30px;
     transition: all 500ms;
 
     a {
@@ -124,7 +124,7 @@ nav.white {
 }
 
 header {
-    background-image: url('../media/img1.jpg');
+    background-image: url('../static/img1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ header {
     .hello-world {
         color: white;
         margin: 50px;
-        font-size: 90px;
+        font-size: 64px;
     }
 
     .info-card {
@@ -232,13 +232,15 @@ main {
         border-radius: 15px;
         background-color: rgba(29, 28, 28, 0.5);
         backdrop-filter: blur(5px);
-        font-size: 36px;
-        width: 45%;
+        font-size: 28px;
+        width: 40%;
+		display: flex;
+		flex-direction: column;
         transition: opacity 0.8s ease-out, transform 0.8s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
 
         .text-block {
             .symbol {
-                font-size: 50px;
+                font-size: 36px;
                 color: rgb(150, 150, 150);
             }
 
@@ -248,7 +250,7 @@ main {
 
         .author {
             color: rgb(138, 138, 138);
-            font-size: 30px;
+            font-size: 24px;
             position: absolute;
             right: 40px;
             bottom: 10px;
@@ -256,7 +258,7 @@ main {
 
         &.active {
             background-color: rgba(50, 50, 50, 0.5);
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
     }
 
@@ -285,10 +287,9 @@ main {
     }
 }
 
-
 .self-section {
     padding-bottom: 100px;
-    background-image: url('../media/img2.jpg');
+    background-image: url('../static/img2.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,14 +312,16 @@ main {
 
         .about {
             padding: 20px;
-            background-color: rgba(84, 84, 84, 0.506);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-            width: 40%;
+			background: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(10px);
+			border-radius: 15px; 
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            width: 50%;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            transform: translateX(40%) translateY(20px);
+            transform: translateX(30%) translateY(20px);
     
             .header {
                 width: fit-content;
@@ -464,11 +467,12 @@ main {
         gap: 40px;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.397);
-        backdrop-filter: blur(5px);
-        padding: 10px;
+		background-color: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(10px);
+		border-radius: 15px; 
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         margin: 20px;
-        border-radius: 15px;
         padding-top: 30px;
         padding-bottom: 30px;
         overflow: hidden;
@@ -576,7 +580,16 @@ main {
                         align-items: center;
                         gap: 5px;
 
+						&.in-row {
+							flex-direction: column;
+							width: max-content;
+							gap: 10px;
+							align-items: stretch;
+						}
+
                         .project {
+							display: flex;
+							justify-content: center;
                             padding: 5px;
                             border-radius: 10px;
                             filter: invert(1);
@@ -584,13 +597,11 @@ main {
                             display: flex;
                             gap: 10px;
                             text-align: right;
-                            width: fit-content;
                             border: 1px solid black;
                             color: black;
                             text-decoration: none;
 
                             .text {
-                                transform: translateY(20%);
                                 text-align: center;
                             }
 
@@ -633,12 +644,6 @@ main {
 
     @media (max-width: 1150px) {
         .skills {
-            width: 100%;
-            border-radius: 0px;
-            padding: 0;
-            padding-top: 30px;
-            padding-bottom: 30px;
-
             .card-block {
                 display: flex;
                 flex-direction: column;
@@ -648,7 +653,12 @@ main {
 
     @media (max-width: 1660px) {
         .skills {
+			border-left: none;
+            padding: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
             width: 100%;
+            border-radius: 0px;
         }
     }
 }
@@ -747,9 +757,9 @@ footer {
             align-items: center;
         }
 
-        .categories-column {
-            transform: translateX(-45%);
-        }
+		.categories-column {
+			width: 100%;
+		}
 
         .category {
             width: 100%;
