@@ -6,7 +6,7 @@ const messages = {
         nav : {
             buttons : {
                 1: "About Me",
-                2: "Knowledge",
+                2: "Experience",
                 3: "Links"
             }
         },
@@ -65,48 +65,35 @@ const messages = {
                     name: "Japaneese"
                 }
             },
-            skills: {
-                experience: "Experience",
-                years: {
-                    1: "year",
-                    2: "years",
-                    3: "years"
-                },
-                month: {
-                    1: "month",
-                    2: "month",
-                    3: "month"
-                },
-                learning: {
-                    title: "Learning",
-                    1: "Powerfull business-oriented language",
-                    2: "Another Python Framework for creating dynamic sites",
-                    3: "Powerfull frontend framework for JavaScript"
-                },
-                learned: {
-                    1: "Powerfull scripting language",
-                    2: "Python Framework for creating dynamic websites",
-                    3: "Python Framework for creating REST API backends",
-                    4: "One of the oldest low-lever programming languages",
-                    5: "Powerfull JavaScript frontend framework",
-                    6: "The most popular version control system",
-                    7: "Powerful, general-purpose programming language",
-                    18: "Microsoft object-oriented language",
-                    19: "Destributions",
-                    20: "Editions",
-
-                    8: "The most popular operating system",
-                    9: "Easy to use, user-friendly Operating System",
-                    10: "The most popular Domain Controller",
-                    11: "Microsoft mail server",
-                    12: "Open-source AD alternative stack (389 DS, Kerberos, BIND, DogTag)",
-                    13: "Open-source VPN service",
-                    14: "Stack of Elasticsearch, Logstash and Kibana services for logs collecting",
-                    15: "Open-source machines monitoring service",
-                    16: "Popular automatization tool",
-                    17: "Popular containerization service"
-                }
-            }
+			work: {
+				header: "Work Experience",
+				1: {
+					name: "Kyivstar.Tech, LLC",
+					position: "Senior System Administrator",
+					work_time: "September 2025 — now",
+					list: {
+						1: "Ensure stable operation of the corporate infrastructure.",
+						2: "Maintain an information system based on Windows and Linux servers hosting the B2B CRM Creatio.",
+						3: "Automate internal requests and routine operational tasks.",
+						4: "Support the security, reliability, and continuous availability of critical systems.",
+						5: "Monitor and troubleshoot infrastructure components to prevent downtime.",
+						6: "Creating routine work automation scripts with AI."
+					}
+				},
+				2: {
+					name: "TRC Respublika, LLC",
+					position: "System Administrator",
+					work_time: "December 2024 — September 2025",
+					list: {
+						1: "Developed an inventory management system from scratch using PostgreSQL and Appsmith, enabling centralized data tracking.",
+						2: "Automated routine administrative tasks by creating Python and PowerShell scripts.",
+						3: "Administered server infrastructure on Windows Server, including MS Exchange and Active Directory DS.",
+						4: "Implemented a Zabbix monitoring system for proactive control of key servers and network devices.",
+						5: "Managed network infrastructure based on MikroTik and TP-Link, performing equipment configuration.",
+						6: "Optimized the workstation preparation process using a universal Windows image for rapid deployment."
+					}
+				}
+			}
         },
         footer: {
             title: {
@@ -121,7 +108,7 @@ const messages = {
         nav: {
             buttons: {
                 1: "Про мене",
-                2: "Мої знання",
+                2: "Досвід",
                 3: "Посилання"
             }
         },
@@ -167,49 +154,48 @@ const messages = {
                 1: "Привіт! Я — Владислав Назаров, але мене також знають під псевдонімами Ель-Капітан або Джон. Я програміст і системний адміністратор із досвідом понад шість років. Починаючи з 2018 року, створюю різні пет-проєкти: системи автоматизації встановлення Linux, телеграм-ботів для інтеграції з системами безпеки, а також вебзастосунки. Найчастіше працюю з Python, C, Bash Script, люблю використовувати інструменти на кшталт Ansible, Docker, Podman і Proxmox.",
                 2: "Зараз я системний адміністратор у компанії Київстар.Тех і відповідаю за стабільну роботу корпоративної інфраструктури. Підтримую інформаційну систему на базі Windows та Linux серверах, які хостять B2B CRM Creatio. Займаюсь автоматизацією запитів, рутинних справ та підтримую рівень безпеки та надійності системи.",
                 3: "У вільний час вчуся грати на гітарі, створюю нові пет-проєкти, експериментую з DevOps-технологіями. Маю волонтерський досвід у благодійних організаціях, а також був активним у студентському самоврядуванні, що допомогло мені розвинути організаторські здібності та командний дух."
-            },
-            skills: {
-                experience: "Досвід",
-                years: {
-                    1: "рік",
-                    2: "роки",
-                    3: "років"
+			},
+            lang : {
+                header : "Мови",
+                2: {
+                    name: "Англійська"
                 },
-                month: {
-                    1: "місяць",
-                    2: "місяці",
-                    3: "місяців"
+                1: {
+                    name: "Українська"
                 },
-                learning: {
-                    title: "Вивчаю",
-                    1: "Потужна бізнес-орієнтована мова",
-                    2: "Ще один фреймворк Python для створення динамічних сайтів",
-                    3: "Потужний інтерфейсний фреймворк для JavaScript"
-                },
-                learned: {
-                    1: "Потужна мова сценаріїв",
-                    2: "Фреймворк Python для створення динамічних вебсайтів",
-                    3: "Фреймворк Python для створення REST API бекендів",
-                    4: "Одна з найстаріших мов програмування низького рівня",
-                    5: "Потужний фронтенд-фреймворк на JavaScript",
-                    6: "Найпопулярніша система контролю версій",
-                    7: "Потужна мова програмування загального призначення",
-                    18: "Об’єктно-орієнтована мова програмування від Microsoft",
-                    19: "Дестрибути",
-                    20: "Видання",
-
-                    8: "Найпопулярніша операційна система",
-                    9: "Проста у використанні, дружня до користувача операційна система",
-                    10: "Найпопулярніший контролер домену",
-                    11: "Поштовий сервер Microsoft",
-                    12: "Відкрита альтернатива Active Directory (389 DS, Kerberos, BIND, DogTag)",
-                    13: "Відкрита VPN-служба",
-                    14: "Стек служб Elasticsearch, Logstash та Kibana для збору логів",
-                    15: "Відкрита система моніторингу машин",
-                    16: "Популярний інструмент автоматизації",
-                    17: "Популярний сервіс контейнеризації"
+                3: {
+                    name: "Японська"
                 }
-            }
+            },
+			work: {
+				header: "Досвід роботи",
+				1: {
+					name: "ТОВ \"Київстар.Тех\"",
+					position: "Старший Адміністратор Системи",
+					work_time: "Вересень 2025 — теперішній час",
+					list: {
+						1: "Забезпечення стабільної роботи корпоративної інфраструктури.",
+						2: "Підтримка інформаційної системи на базі серверів Windows і Linux, що розміщують B2B CRM Creatio.",
+						3: "Автоматизація внутрішніх запитів та рутинних операційних завдань.",
+						4: "Підтримка безпеки, надійності та безперервної доступності критичних систем.",
+						5: "Моніторинг та усунення проблем компонентів інфраструктури для запобігання простоїв.",
+						6: "Створення скриптів автоматизації рутинної роботи за допомогою AI."
+					}
+				},
+				2: {
+					name: "ТОВ \"ТРЦ Республіка\"",
+					position: "Адміністратор Системи",
+					work_time: "Грудень 2024 — Вересень 2025",
+					list: {
+						1: "Розробив систему управління інвентаризацією з нуля з використанням PostgreSQL та Appsmith, що дозволило централізовано відстежувати дані.",
+						2: "Автоматизував рутинні адміністративні завдання за допомогою скриптів на Python та PowerShell.",
+						3: "Адміністрував серверну інфраструктуру на Windows Server, включно з MS Exchange та Active Directory DS.",
+						4: "Впровадив систему моніторингу Zabbix для проактивного контролю ключових серверів та мережевого обладнання.",
+						5: "Керував мережею на базі MikroTik та TP-Link, здійснюючи конфігурацію обладнання.",
+						6: "Оптимізував процес підготовки робочих місць за допомогою універсального образу Windows для швидкого розгортання."
+					}
+				}
+			}
         },
         footer: {
             title: {
@@ -224,7 +210,7 @@ const messages = {
 		nav: {
 			buttons: {
 				1: "私について",
-				2: "知識",
+				2: "経験",
 				3: "リンク"
 			}
 		},
@@ -323,6 +309,35 @@ const messages = {
 					15: "オープンソースのマシン監視サービス",
 					16: "人気の自動化ツール",
 					17: "人気のコンテナ化サービス"
+				}
+			},
+			work: {
+				header: "職務経験",
+				1: {
+					name: "Kyivstar.Tech, LLC",
+					position: "シニアシステム管理者",
+					work_time: "2025年9月 — 現在",
+					list: {
+						1: "企業インフラの安定稼働を確保。",
+						2: "WindowsおよびLinuxサーバー上で稼働するB2B CRM Creatioに基づく情報システムを維持。",
+						3: "社内リクエストおよび日常の運用タスクを自動化。",
+						4: "重要システムのセキュリティ、信頼性、継続的な可用性をサポート。",
+						5: "インフラストラクチャコンポーネントを監視し、ダウンタイムを防止。",
+						6: "AIを用いた日常業務の自動化スクリプトの作成。"
+					}
+				},
+				2: {
+					name: "TRC Respublika, LLC",
+					position: "システム管理者",
+					work_time: "2024年12月 — 2025年9月",
+					list: {
+						1: "PostgreSQLとAppsmithを使用して、中央集約型データ追跡が可能な在庫管理システムをゼロから開発。",
+						2: "PythonおよびPowerShellスクリプトを作成して、日常の管理タスクを自動化。",
+						3: "Windows Server上のサーバーインフラを管理し、MS ExchangeおよびActive Directory DSを含む。",
+						4: "主要なサーバーおよびネットワーク機器のプロアクティブ監視のためにZabbixモニタリングシステムを実装。",
+						5: "MikroTikおよびTP-Linkベースのネットワークインフラを管理し、機器の設定を実施。",
+						6: "迅速な展開のために汎用Windowsイメージを使用してワークステーションの準備プロセスを最適化。"
+					}
 				}
 			}
 		},

@@ -34,7 +34,7 @@
             <nav id="nav">
                 <img src="./static/mountain.png" alt="">
                 <a href="#about">{{ t('nav.buttons.1') }}</a>
-                <a href="#skills">{{ t('nav.buttons.2') }}</a>
+                <a href="#experience">{{ t('nav.buttons.2') }}</a>
                 <a href="#links">{{ t('nav.buttons.3') }}</a>
 
                 <select id="language-selector" v-model="locale">
@@ -114,17 +114,17 @@
                                 {{ t("about.header") }}
                             </div>
 
-                            <div class="text">
-                                {{ t("about.textblocks.1") }}
-                            </div>
+							<div class="text">
+								{{ t("about.textblocks.1") }}
+							</div>
 
-                            <div class="text">
-                                {{ t("about.textblocks.2") }}
-                            </div>
+							<div class="text">
+								{{ t("about.textblocks.2") }}
+							</div>
 
-                            <div class="text">
-                                {{ t("about.textblocks.3") }}
-                            </div>
+							<div class="text">
+								{{ t("about.textblocks.3") }}
+							</div>
 
                             <div class="header">
                                 {{ t("about.lang.header") }}
@@ -155,278 +155,88 @@
                                     <div class="lang-name">{{ t("about.lang.3.name") }}</div>
 
                                     <div class="level">
-                                        <div class="name p1 slide">N5</div>
+                                        <div class="name p5-1 slide">N5</div>
                                     </div>
 
-                                    <div class="progress p1 gunjyou slide"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills slide" id="skills">
-                        <div class="button-block">
-                            <button type="button" onclick="next()" id="btn2">Developer Stack</button>
-                            <button type="button" onclick="prev()" id="btn1">SysAdmin Stack</button>
-                        </div>
-                        
-                        <div class="slide-wrapper">
-                            <div class="slide-block" id="wrapper-element-1">
-                                <div class="card-block grid-3" id="developer-stack">
-                                    <div class="card slide">
-                                        <div class="icon"><img src="static/python-logo.webp" alt="" srcset=""></div>
-                                        <div class="name">Python</div>
-                                        <div class="description">{{ t("about.skills.learned.1") }}</div>
-                                        <div class="experience">
-                                            <div class="projects">
-                                                <a href="https://github.com/at-elcapitan/Limited_Py" target="_blank" class="project"><img src="static/github-logo.png"><span class="text">Limited nEXT</span></a>
-                                            </div>
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 6+ {{ t("about.skills.years.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white pad" src="static/c.svg" alt="" srcset=""></div>
-                                        <div class="name">C</div>
-                                        <div class="description">{{ t("about.skills.learned.4") }}</div>
-                                        <div class="experience">
-                                            <div class="projects">
-                                                <a href="https://github.com/at-elcapitan/Limited-TNiC" target="_blank" class="project"><img src="static/github-logo.png"><span class="text">Limited TNiC</span></a>
-                                            </div>
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 2 {{ t("about.skills.years.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white pad" src="static/c++.png" alt="" srcset=""></div>
-                                        <div class="name">C++</div>
-                                        <div class="description">{{ t("about.skills.learned.7") }}</div>
-                                        <div class="experience">
-                                            <div class="text">{{ t("about.skills.experience") }}: 1.5 {{ t("about.skills.years.2") }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-block grid-3" id="developer-stack">
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white pad" src="static/cs.png" alt="" srcset=""></div>
-                                        <div class="name">C#</div>
-                                        <div class="description">{{ t("about.skills.learned.18") }}</div>
-                                        <div class="experience">
-                                            <div class="projects">
-                                                <a href="https://gitea.atproject.com.ua/elcapitan/Directory-diSplay-sharp" target="_blank" class="project"><img src="static/gitea.png"><span class="text">Directory diSplay</span></a>
-                                            </div>
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 6 {{ t("about.skills.month.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/flask.png" alt="" srcset=""></div>
-                                        <div class="name">Flask</div>
-                                        <div class="description">{{ t("about.skills.learned.2") }}</div>
-                                        <div class="experience">
-                                            <div class="projects">
-                                                <a href="https://github.com/at-elcapitan/CheckNOTHeart" target="_blank" class="project"><img src="static/github-logo.png"><span class="text">CheckNOTHeart</span></a>
-                                            </div>
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 2 {{ t("about.skills.years.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card slide">
-                                        <div class="icon"><img src="static/fastapi.svg" alt="" srcset=""></div>
-                                        <div class="name">FastAPI</div>
-                                        <div class="description">{{ t("about.skills.learned.3") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 2 {{ t("about.skills.month.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-block grid-2" id="developer-stack">
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white scale" src="static/vue.png" alt="" srcset=""></div>
-                                        <div class="name">Vue.js</div>
-                                        <div class="description">{{ t("about.skills.learned.5") }}</div>
-                                        <div class="experience">
-                                            <div class="projects">
-                                                <a href="https://gitea.atproject.com.ua/elcapitan/about-me" target="_blank" class="project"><img src="static/gitea.png"><span class="text">About Me</span></a>
-                                            </div>
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 4 {{ t("about.skills.month.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/git.png" alt="" srcset=""></div>
-                                        <div class="name">Git</div>
-                                        <div class="description">{{ t("about.skills.learned.6") }}</div>
-                                        <div class="experience">
-                                            <div class="projects in-row">
-                                                <a href="https://gitea.atproject.com.ua/elcapitan" target="_blank" class="project"><img src="static/gitea.png"><span class="text">elcapitan</span></a>
-                                                <a href="https://github.com/at-elcapitan" target="_blank" class="project"><img src="static/github-logo.png"><span class="text">at-elcapitan</span></a>
-                                            </div>
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 5+ {{ t("about.skills.years.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div class="progress p5-1 gunjyou slide" id="experience"></div>
                                 </div>
                             </div>
 
-                            <div class="slide-block" id="wrapper-element-2">
-                                <div class="card-block grid-3">
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white pad" src="static/linux.png" alt="" srcset=""></div>
-                                        <div class="name">Linux</div>
-                                        <div class="description">{{ t("about.skills.learned.8") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                <b style="font-size: 20px;">{{ t("about.skills.learned.19") }}</b><br><br>Ubuntu, Debian, Arch, Fedora, Gentoo <br><br>
-                                                {{ t("about.skills.experience") }}: 8+ {{ t("about.skills.years.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/windows.png" alt="" srcset=""></div>
-                                        <div class="name">Windows</div>
-                                        <div class="description">{{ t("about.skills.learned.9") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                <b style="font-size: 20px;">{{ t("about.skills.learned.20") }}</b><br><br>7, 10, 11, Server 2000, Server 2008, Server 2016<br><br>
-                                                {{ t("about.skills.experience") }}: 10+ {{ t("about.skills.years.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/windows.png" alt="" srcset=""></div>
-                                        <div class="name">Windows Active Directory</div>
-                                        <div class="description">{{ t("about.skills.learned.10") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 2 {{ t("about.skills.years.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-block grid-3">
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white pad" src="static/exchange.png" alt="" srcset=""></div>
-                                        <div class="name">MS Exchange</div>
-                                        <div class="description">{{ t("about.skills.learned.11") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 6 {{ t("about.skills.month.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white pad" src="static/freeipa.png" alt="" srcset=""></div>
-                                        <div class="name">FreeIPA</div>
-                                        <div class="description">{{ t("about.skills.learned.12") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 6 {{ t("about.skills.month.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/openvpn.png" alt="" srcset=""></div>
-                                        <div class="name">OpenVPN</div>
-                                        <div class="description">{{ t("about.skills.learned.13") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 6 {{ t("about.skills.month.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-block grid-3">
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/elk.png" alt="" srcset=""></div>
-                                        <div class="name">ELK Stack</div>
-                                        <div class="description">{{ t("about.skills.learned.14") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 8 {{ t("about.skills.month.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/zabbix.webp" alt="" srcset=""></div>
-                                        <div class="name">Zabbix</div>
-                                        <div class="description">{{ t("about.skills.learned.15") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 4 {{ t("about.skills.month.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/ansible.png" alt="" srcset=""></div>
-                                        <div class="name">Ansible</div>
-                                        <div class="description">{{ t("about.skills.learned.16") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 8 {{ t("about.skills.month.3") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-block grid-1">
-                                    <div class="card slide">
-                                        <div class="icon"><img class="white" src="static/docker.webp" alt="" srcset=""></div>
-                                        <div class="name">Docker</div>
-                                        <div class="description">{{ t("about.skills.learned.17") }}</div>
-                                        <div class="experience">
-                                            <div class="text">
-                                                {{ t("about.skills.experience") }}: 1.5 {{ t("about.skills.years.2") }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+							<div class="header">
+                           		{{ t("about.work.header") }}
+							</div>
 
-                        <div class="title">{{ t("about.skills.learning.title") }}</div>
+							<div class="works">
+								<div class="work-place">
+									<div class="years">{{ t("about.work.1.work_time") }}</div>
+									
+									<div class="info-wrapper">
+										<div class="work-info">
+											<img src="static/work/2.png" class="tech-img" alt="">
+											<div class="name">{{ t("about.work.1.name") }}</div>
+											<div class="position">{{ t("about.work.1.position") }}</div>
 
-                        <div class="card-block grid-3">
-                            <div class="card slide">
-                                <div class="icon"><img class="white pad" src="static/java.png" alt="" srcset=""></div>
-                                <div class="name">Java</div>
-                                <div class="description">{{ t("about.skills.learning.1") }}</div>
-                            </div>
+											<div class="tech-block">
+												<div class="technology">
+													<img src="static/linux.png" class="small" alt="">
+												</div>
+												<div class="technology">
+													<img src="static/windows.png" alt="">
+												</div>
+												<div class="technology">
+													<img src="static/creatio.png" class="medium" alt="">
+												</div>
+											</div>
+										</div>
 
-                            <div class="card slide">
-                                <div class="icon"><img src="static/django.svg" alt="" srcset=""></div>
-                                <div class="name">Django</div>
-                                <div class="description">{{ t("about.skills.learning.2") }}</div>
-                            </div>
+										<div class="text">
+											<ul>
+												<li>{{ t("about.work.1.list.1") }}</li>
+												<li>{{ t("about.work.1.list.2") }}</li>
+												<li>{{ t("about.work.1.list.3") }}</li>
+												<li>{{ t("about.work.1.list.4") }}</li>
+												<li>{{ t("about.work.1.list.5") }}</li>
+												<li>{{ t("about.work.1.list.6") }}</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 
-                            <div class="card slide">
-                                <div class="icon"><img class="white pad" src="static/react.svg" alt="" srcset=""></div>
-                                <div class="name">React.js</div>
-                                <div class="description">{{ t("about.skills.learning.3") }}</div>
-                            </div>
+								<div class="work-place">
+									<div class="years">{{ t("about.work.2.work_time") }}</div>
+									
+									<div class="info-wrapper">
+										<div class="work-info">
+											<img src="static/work/1.jpg" class="tech-img" alt="">
+											<div class="name">{{ t("about.work.2.name") }}</div>
+											<div class="position">{{ t("about.work.2.position") }}</div>
+
+											<div class="tech-block">
+												<div class="technology">
+													<img src="static/windows.png" alt="">
+												</div>
+												<div class="technology">
+													<img src="static/exchange.png" class="small" alt="">
+												</div>
+												<div class="technology">
+													<img src="static/zabbix.webp" alt="">
+												</div>
+											</div>
+										</div>
+
+										<div class="text">
+											<ul>
+												<li>{{ t("about.work.2.list.1") }}</li>
+												<li>{{ t("about.work.2.list.2") }}</li>
+												<li>{{ t("about.work.2.list.3") }}</li>
+												<li>{{ t("about.work.2.list.4") }}</li>
+												<li>{{ t("about.work.2.list.5") }}</li>
+												<li>{{ t("about.work.2.list.6") }}</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -443,7 +253,6 @@
                             <a class="item" href="https://www.flaticon.com/free-icon/mail_646094" target="_blank"><img src="static/link.png">Mail Icon</a>
                             <a class="item" href="https://www.pexels.com/photo/silhouetted-mountains-in-yosemite-national-park-14028270/" target="_blank"><img src="static/link.png">El Capitan Photo</a>
                             <a class="item" href="https://commons.wikimedia.org/wiki/File:Tunnel_View_2,_Yosemite_Valley,_Yosemite_NP_-_Diliff.jpg" target="_blank"><img src="static/link.png">El Capitan Photo</a>
-                            <a class="item" href="https://www.behance.net/gallery/223317883/Folies-Bergere-font" target="_blank"><img src="static/link.png">Folies Bergere Font</a>
                             <a class="item" href="https://www.flaticon.com/free-icon/mountains_672710" target="_blank"><img src="static/link.png">Site Icon</a>
                             <a class="item" href="https://www.flaticon.com/free-icons/windows" title="coding icons"><img src="static/link.png">Windows icon by Freepik</a>
                         </div>
@@ -498,10 +307,7 @@
             const header = document.getElementById('header');
             const about = document.getElementById('about');
             const nav = document.getElementById('nav');
-            const element1 = document.getElementById('wrapper-element-1');
-            const element2 = document.getElementById('wrapper-element-2');
-            const btn1 = document.getElementById('btn1');
-            const btn2 = document.getElementById('btn2');
+			const footer = document.getElementById('links');
 
             window.addEventListener('scroll', () => {
                 const currentScrollTop = window.scrollY;
@@ -512,11 +318,16 @@
                     header.style.display = 'flex';
                 }
                 
-                if (about.getBoundingClientRect().y <= 10) {
-                    nav.classList.add("white");
-                } else {
-                    nav.classList.remove("white");
-                }
+                const aboutY = about.getBoundingClientRect().top;
+				const footerY = footer.getBoundingClientRect().top;
+
+				if (footerY <= 10) {
+					nav.classList.remove("white");
+				} else if (aboutY <= 10) {
+					nav.classList.add("white");
+				} else {
+					nav.classList.remove("white");
+				}
 
                 if (arrow.getBoundingClientRect().y <= 10) {
                     navscroll.style.display = 'inherit';
@@ -532,7 +343,6 @@
                     arrow.classList.remove('rotate');
                 }
 
-                // 🔥 Определяем ближайший .quote к центру экрана
                 const quotes = document.querySelectorAll('.quote');
                 const center = window.innerHeight / 2;
 
@@ -568,23 +378,6 @@
             document.querySelectorAll('.slide').forEach(object => {
                 observer.observe(object);
             });
-
-            element1.style.display = "flex";
-            btn2.classList.add('selected');
-
-            function next() {
-                element2.style.display = "none";
-                element1.style.display = "flex";
-                btn2.classList.add('selected');
-                btn1.classList.remove('selected');
-            }
-
-            function prev() {
-                element1.style.display = "none";
-                element2.style.display = "flex";
-                btn1.classList.add('selected');
-                btn2.classList.remove('selected');
-            }
         </script>
     </body>
 </html>
