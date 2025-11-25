@@ -35,7 +35,7 @@
                 <img src="./static/mountain.png" alt="">
                 <a href="#about">{{ t('nav.buttons.1') }}</a>
                 <a href="#experience">{{ t('nav.buttons.2') }}</a>
-                <a href="#links">{{ t('nav.buttons.3') }}</a>
+				<a href="#techstack">{{ t('nav.buttons.3') }}</a>
 
                 <select id="language-selector" v-model="locale">
                     <option value="en">EN</option>
@@ -166,24 +166,24 @@
                            		{{ t("about.work.header") }}
 							</div>
 
-							<div class="works">
-								<div class="work-place">
-									<div class="years">{{ t("about.work.1.work_time") }}</div>
+							<div class="blocks">
+								<div class="block">
+									<div class="top-information">{{ t("about.work.1.work_time") }}</div>
 									
-									<div class="info-wrapper">
-										<div class="work-info">
+									<div class="block-wrapper">
+										<div class="block-topic">
 											<img src="static/work/2.png" class="tech-img" alt="">
 											<div class="name">{{ t("about.work.1.name") }}</div>
-											<div class="position">{{ t("about.work.1.position") }}</div>
+											<div class="subname">{{ t("about.work.1.position") }}</div>
 
-											<div class="tech-block">
-												<div class="technology">
+											<div class="cubic-wrapper">
+												<div class="cubic-item">
 													<img src="static/linux.png" class="small" alt="">
 												</div>
-												<div class="technology">
+												<div class="cubic-item">
 													<img src="static/windows.png" alt="">
 												</div>
-												<div class="technology">
+												<div class="cubic-item">
 													<img src="static/creatio.png" class="medium" alt="">
 												</div>
 											</div>
@@ -202,23 +202,23 @@
 									</div>
 								</div>
 
-								<div class="work-place">
-									<div class="years">{{ t("about.work.2.work_time") }}</div>
+								<div class="block">
+									<div class="top-information">{{ t("about.work.2.work_time") }}</div>
 									
-									<div class="info-wrapper">
-										<div class="work-info">
+									<div class="block-wrapper">
+										<div class="block-topic">
 											<img src="static/work/1.jpg" class="tech-img" alt="">
 											<div class="name">{{ t("about.work.2.name") }}</div>
-											<div class="position">{{ t("about.work.2.position") }}</div>
+											<div class="subname">{{ t("about.work.2.position") }}</div>
 
-											<div class="tech-block">
-												<div class="technology">
+											<div class="cubic-wrapper">
+												<div class="cubic-item">
 													<img src="static/windows.png" alt="">
 												</div>
-												<div class="technology">
+												<div class="cubic-item">
 													<img src="static/exchange.png" class="small" alt="">
 												</div>
-												<div class="technology">
+												<div class="cubic-item">
 													<img src="static/zabbix.webp" alt="">
 												</div>
 											</div>
@@ -231,8 +231,256 @@
 												<li>{{ t("about.work.2.list.3") }}</li>
 												<li>{{ t("about.work.2.list.4") }}</li>
 												<li>{{ t("about.work.2.list.5") }}</li>
-												<li>{{ t("about.work.2.list.6") }}</li>
+												<li id="techstack">{{ t("about.work.2.list.6") }}</li>
 											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="header">
+                           		{{ t("about.showcase.header") }}
+							</div>
+
+							<div class="blocks">
+								<div class="block centered gap">
+									<div class="name">
+										{{ t("about.showcase.dev.header") }}
+									</div>
+
+									<div class="cubic-wrapper change more-items extended-gap">
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/python-logo.webp" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Python
+												</div>
+
+												5 {{ t("about.showcase.formating.year.3") }}
+											</div>
+										</div>
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/c.svg" class="medium" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													C
+												</div>
+
+												3 {{ t("about.showcase.formating.year.2") }}
+											</div>
+										</div>
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/c++.png" class="medium" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													C++
+												</div>
+
+												3 {{ t("about.showcase.formating.year.2") }}
+											</div>
+										</div>
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/cs.png" class="medium" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													C#
+												</div>
+
+												5 {{ t("about.showcase.formating.month.3") }}
+											</div>
+										</div>
+									</div>
+
+									<div class="cubic-wrapper change extended-gap more-items">
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round no-bg">
+												<img src="static/fastapi.svg" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													FastAPI
+												</div>
+
+												4 {{ t("about.showcase.formating.month.2") }}
+											</div>
+										</div>
+
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/sqlalchemy.png" class="small cubic" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													SQLAlchemy
+												</div>
+
+												4 {{ t("about.showcase.formating.month.2") }}
+											</div>
+										</div>
+
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/vue.png" class="small" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Vue.js
+												</div>
+
+												4 {{ t("about.showcase.formating.month.2") }}
+											</div>
+										</div>
+										
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/flask.png" class="medium" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Flask
+												</div>
+
+												1 {{ t("about.showcase.formating.year.1") }}
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="block centered gap">
+									<div class="name">
+										{{ t("about.showcase.sysadmin.header") }}
+									</div>
+
+									<div class="cubic-wrapper change more-items extended-gap">
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/windows.png" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Windows
+												</div>
+
+												5 {{ t("about.showcase.formating.year.3") }}
+											</div>
+										</div>
+
+
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/ad.png" class="medium" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													AD DC
+												</div>
+
+												1 {{ t("about.showcase.formating.year.1") }}
+											</div>
+										</div>
+										
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/linux.png" class="small" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Linux
+												</div>
+
+												1 {{ t("about.showcase.formating.year.1") }}
+											</div>
+										</div>
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/freeipa.png" class="medium" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													FreeIPA
+												</div>
+
+												1 {{ t("about.showcase.formating.year.1") }}
+											</div>
+										</div>
+									</div>
+
+									<div class="cubic-wrapper change extended-gap more-items">
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round no-bg">
+												<img src="static/openvpn.png" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													OpenVPN
+												</div>
+
+												4 {{ t("about.showcase.formating.month.2") }}
+											</div>
+										</div>
+
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/elk.png" class="medium">
+											</div>
+
+											<div>
+												<div class="label">
+													ELK
+												</div>
+
+												4 {{ t("about.showcase.formating.month.2") }}
+											</div>
+										</div>
+										
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/ansible.png" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Ansible
+												</div>
+
+												1 {{ t("about.showcase.formating.year.1") }}
+											</div>
+										</div>
+
+										<div class="labeled-cubic-container">
+											<div class="cubic-item bigger round">
+												<img src="static/creatio.png" alt="">
+											</div>
+
+											<div>
+												<div class="label">
+													Creatio
+												</div>
+
+												3 {{ t("about.showcase.formating.month.2") }}
+											</div>
 										</div>
 									</div>
 								</div>
@@ -248,7 +496,6 @@
                             <a class="item" href="https://vuejs.org/" target="_blank"><img src="static/link.png">Vue.js Framework</a>
                             <a class="item" href="https://www.i18next.com/" target="_blank"><img src="static/link.png">i18n Framework</a>
                             <a class="item" href="https://www.flaticon.com/free-icon/github-logo_25231" target="_blank"><img src="static/link.png">GitHub Icon</a>
-                            <a class="item" href="https://www.flaticon.com/free-icon/java_226777" target="_blank"><img src="static/link.png">Java Icon</a>
                             <a class="item" target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"><img src="static/link.png">C Programming icon</a>
                             <a class="item" href="https://www.flaticon.com/free-icon/mail_646094" target="_blank"><img src="static/link.png">Mail Icon</a>
                             <a class="item" href="https://www.pexels.com/photo/silhouetted-mountains-in-yosemite-national-park-14028270/" target="_blank"><img src="static/link.png">El Capitan Photo</a>

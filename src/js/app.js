@@ -7,7 +7,7 @@ const messages = {
             buttons : {
                 1: "About Me",
                 2: "Experience",
-                3: "Links"
+				3: "Showcase"
             }
         },
         hello: {
@@ -93,6 +93,27 @@ const messages = {
 						6: "Optimized the workstation preparation process using a universal Windows image for rapid deployment."
 					}
 				}
+			},
+			showcase: {
+				header: "Showcase",
+				dev: {
+					header: "Developer Stack"
+				},
+				sysadmin: {
+					header: "DevOps/SysAdmin Stack"
+				},
+				formating: {
+					year: {
+						1: "year",
+						2: "years",
+						3: "years"
+					},
+					month: {
+						1: "month",
+						2: "month",
+						3: "month"
+					}
+				}
 			}
         },
         footer: {
@@ -109,7 +130,7 @@ const messages = {
             buttons: {
                 1: "Про мене",
                 2: "Досвід",
-                3: "Посилання"
+                3: "Портфоліо"
             }
         },
         hello: {
@@ -195,6 +216,27 @@ const messages = {
 						6: "Оптимізував процес підготовки робочих місць за допомогою універсального образу Windows для швидкого розгортання."
 					}
 				}
+			},
+			showcase: {
+				header: "Вітрина",
+				dev: {
+					header: "Стек розробника"
+				},
+				sysadmin: {
+					header: "DevOps/SysAdmin стек"
+				},
+				formating: {
+					year: {
+						1: "рік",
+						2: "роки",
+						3: "років"
+					},
+					month: {
+						1: "місяць",
+						2: "місяці",
+						3: "місяців"
+					}
+				}
 			}
         },
         footer: {
@@ -211,7 +253,7 @@ const messages = {
 			buttons: {
 				1: "私について",
 				2: "経験",
-				3: "リンク"
+				3: "展示"
 			}
 		},
 		hello: {
@@ -337,6 +379,27 @@ const messages = {
 						4: "主要なサーバーおよびネットワーク機器のプロアクティブ監視のためにZabbixモニタリングシステムを実装。",
 						5: "MikroTikおよびTP-Linkベースのネットワークインフラを管理し、機器の設定を実施。",
 						6: "迅速な展開のために汎用Windowsイメージを使用してワークステーションの準備プロセスを最適化。"
+					}
+				}
+			},
+			showcase: {
+				header: "ショーケース",
+				dev: {
+					header: "開発者スタック"
+				},
+				sysadmin: {
+					header: "DevOps／シスアドミン・スタック"
+				},
+				formating: {
+					year: {
+						1: "年",
+						2: "年",
+						3: "年"
+					},
+					month: {
+						1: "ヶ月",
+						2: "ヶ月",
+						3: "ヶ月"
 					}
 				}
 			}
