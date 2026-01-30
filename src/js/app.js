@@ -3,6 +3,18 @@ const { createI18n, useI18n } = VueI18n;
 
 const messages = {
     en: {
+		formatting: {
+			year: {
+				1: "year",
+				2: "years",
+				3: "years"
+			},
+			month: {
+				1: "month",
+				2: "month",
+				3: "month"
+			}
+		},
         nav : {
             buttons : {
                 1: "About Me",
@@ -35,14 +47,6 @@ const messages = {
                 3: {
                     text: "Any excessively general statement in biology is false, including this one.",
                     author: "Alexander Panchin, scientist"
-                },
-                4: {
-                    text: "Even if you were born and raised in a small town, you always have a chance to make it to the very top.",
-                    author: "Yuri Dud, journalist"
-                },
-                5: {
-                    text: "Where is strength? In the ability to see objective reality, to fight for the truth, to separate it from the superficial. In the end, yes, strength is in the truth. And in believing that the truth exists and can be established.",
-                    author: "Leonid Volkov, director of ACF"
                 }
             }
         },
@@ -92,6 +96,19 @@ const messages = {
 						5: "Managed network infrastructure based on MikroTik and TP-Link, performing equipment configuration.",
 						6: "Optimized the workstation preparation process using a universal Windows image for rapid deployment."
 					}
+				},
+				3: {
+					name: "Kyiv Professional College of Communication",
+					position: "System/Network Administrator",
+					work_time: "October 2023 — December 2024",
+					list : {
+						1: "Administered over 200 GNU/Linux-based and Windows-based computers",
+						2: "Deployed and maintained virtual machines on Proxmox and deployed services using Docker and Podman",
+						3: "Setted up container management using Portainer",
+						4: "Automated hardware interaction using Ansible",
+						5: "Deployed Active Directory on Windows Server for centralized user management and configured Group Policies",
+						6: "Ensured stable operation of the legacy hardware/software"
+					}
 				}
 			},
 			showcase: {
@@ -101,18 +118,6 @@ const messages = {
 				},
 				sysadmin: {
 					header: "DevOps/SysAdmin Stack"
-				},
-				formating: {
-					year: {
-						1: "year",
-						2: "years",
-						3: "years"
-					},
-					month: {
-						1: "month",
-						2: "month",
-						3: "month"
-					}
 				}
 			}
         },
@@ -126,6 +131,18 @@ const messages = {
         }
     },
     ua: { 
+		formatting: {
+			year: {
+				1: "рік",
+				2: "роки",
+				3: "років"
+			},
+			month: {
+				1: "місяць",
+				2: "місяці",
+				3: "місяців"
+			}
+		},
         nav: {
             buttons: {
                 1: "Про мене",
@@ -158,14 +175,6 @@ const messages = {
                 3: {
                     text: "Будь-яке надто загальне твердження в біології завідомо хибне, включно з цим.",
                     author: "Олександр Панчин, вчений"
-                },
-                4: {
-                    text: "Навіть якщо ви народилися й виросли у маленькому містечку, у вас завжди є шанс дістатися самого верху.",
-                    author: "Юрій Дудь, журналіст"
-                },
-                5: {
-                    text: "У чому сила? В умінні бачити об'єктивну реальність, боротися за правду, відділяти її від наносного. Зрештою, так, сила у правді. І у вірі, що правда існує та може бути встановлена.",
-                    author: "Леонід Волков, директор ФБК"
                 }
             }
         },
@@ -215,27 +224,28 @@ const messages = {
 						5: "Керував мережею на базі MikroTik та TP-Link, здійснюючи конфігурацію обладнання.",
 						6: "Оптимізував процес підготовки робочих місць за допомогою універсального образу Windows для швидкого розгортання."
 					}
+				},
+				3: {
+					name: "Київський фаховий коледж зв’язку",
+					position: "Системний/Мережевий адміністратор",
+					work_time: "Жовтень 2023 — Грудень 2024",
+					list : {
+						1: "Адміністрував понад 200 комп’ютерів на базі GNU/Linux та Windows",
+						2: "Розгортав і супроводжував віртуальні машини на Proxmox та сервіси з використанням Docker і Podman",
+						3: "Налаштував керування контейнерами за допомогою Portainer",
+						4: "Автоматизував взаємодію з ПК за допомогою Ansible",
+						5: "Розгорнув Active Directory на Windows Server для централізованого керування користувачами та налаштував групові політики",
+						6: "Забезпечував стабільну роботу застарілого апаратного та програмного забезпечення"
+					}
 				}
 			},
 			showcase: {
-				header: "Вітрина",
+				header: "Портфоліо",
 				dev: {
 					header: "Стек розробника"
 				},
 				sysadmin: {
 					header: "DevOps/SysAdmin стек"
-				},
-				formating: {
-					year: {
-						1: "рік",
-						2: "роки",
-						3: "років"
-					},
-					month: {
-						1: "місяць",
-						2: "місяці",
-						3: "місяців"
-					}
 				}
 			}
         },
@@ -249,6 +259,18 @@ const messages = {
         }
     },
 	jp: {
+		formatting: {
+			year: {
+				1: "年",
+				2: "年",
+				3: "年"
+			},
+			month: {
+				1: "ヶ月",
+				2: "ヶ月",
+				3: "ヶ月"
+			}
+		},
 		nav: {
 			buttons: {
 				1: "私について",
@@ -281,23 +303,15 @@ const messages = {
 				3: {
 					text: "生物学における過度に一般化された主張は、これも含めてすべて誤りである。",
 					author: "アレクサンドル・パンチン、科学者"
-				},
-				4: {
-					text: "小さな町で生まれ育っても、頂点に立つチャンスは必ずある。",
-					author: "ユーリ・ドゥード、ジャーナリスト"
-				},
-				5: {
-					text: "強さとは何か？客観的な現実を見る力、真実のために戦う力、表面的なものから本質を見分ける力だ。結局のところ、そう、強さとは真実にある。そして、真実が存在し、明らかにできると信じることだ。",
-					author: "レオニード・ヴォルコフ、ACFディレクター"
 				}
 			}
 		},
 		about: {
 			header: "私について",
 			textblocks: {
-				"1": "よー！ウラディスラフ『ElCaptain』ナザロフで、ジョンとしても呼ばれます。6年以上の経験を持つプログラマー兼システム管理者です。2018年から、Linuxインストール自動化システム、カメラ監視との連携用Telegramボット、Webアプリケーションなど、さまざまな個人プロジェクトを作成してきました。主に Python、C、Bash Script を使用し、Ansible、Docker、Podman、Proxmox といったツールの学習を楽しんでいます。",
-				"2": "現在、Kyivstar.Tech のシニアシステム管理者として、企業インフラの安定稼働を担当しています。Windows および Linux サーバー上で稼働する B2B CRM Creatio の情報システムを維持管理しています。リクエストの自動化、日常作業の効率化、システムのセキュリティと信頼性の確保を行っています。",
-				"3": "自由時間にはギターを練習したり、新しい個人プロジェクトを作成したり、DevOps 技術の実験を行っています。また、慈善団体でのボランティア経験があり、学生自治組織で積極的に活動していたため、組織力とチームワークを身につけることができました。"
+				"1": "よー！ウラディスラフ『ElCaptain』ナザロフで、ジョンとしても呼ばれます。6年以上の経験を持つプログラマー兼システム管理者です。2018年から、『Linux』インストール自動化システム、カメラ監視との連携用Telegramボット、Webアプリケーションなど、さまざまな個人プロジェクトを作成してきました。主に 『Python』、『C』、『Bash　Script』 を使用し、『Ansible』、『Docker』、『Podman』、『Proxmox』といったツールの学習を楽しんでいます。",
+				"2": "現在、『Kyivstar.Tech』のシニアシステム管理者として、企業インフラの安定稼働を担当しています。『Windows』および『Linux』サーバー上で稼働する『CRM　Creatio』の情報システムを維持管理しています。リクエストの自動化、日常作業の効率化、システムのセキュリティと信頼性の確保を行っています。",
+				"3": "自由時間にはギターを練習したり、新しい個人プロジェクトを作成したり、DevOps技術の実験を行っています。また、慈善団体でのボランティア経験があり、学生自治組織で積極的に活動していたため、組織力とチームワークを身につけることができました。"
 			},
 			lang: {
 				header: "語学スキル",
@@ -344,8 +358,8 @@ const messages = {
 					8: "最も人気のあるオペレーティングシステム",
 					9: "使いやすくユーザーフレンドリーなオペレーティングシステム",
 					10: "最も人気のあるドメインコントローラー",
-					11: "Microsoft のメールサーバー",
-					12: "オープンソースのAD代替スタック（389 DS、Kerberos、BIND、DogTag）",
+					11: "Microsoftのメールサーバー",
+					12: "オープンソースのAD代替スタック（389　DS、Kerberos、BIND、DogTag）",
 					13: "オープンソースのVPNサービス",
 					14: "ログ収集のための Elasticsearch、Logstash、Kibana のスタック",
 					15: "オープンソースのマシン監視サービス",
@@ -361,7 +375,7 @@ const messages = {
 					work_time: "2025年9月 — 現在",
 					list: {
 						1: "企業インフラの安定稼働を確保。",
-						2: "WindowsおよびLinuxサーバー上で稼働するB2B CRM Creatioに基づく情報システムを維持。",
+						2: "『Windows』および『Linux』サーバー上で稼働する『CRM　Creatio』に基づく情報システムを維持。",
 						3: "社内リクエストおよび日常の運用タスクを自動化。",
 						4: "重要システムのセキュリティ、信頼性、継続的な可用性をサポート。",
 						5: "インフラストラクチャコンポーネントを監視し、ダウンタイムを防止。",
@@ -373,12 +387,25 @@ const messages = {
 					position: "システム管理者",
 					work_time: "2024年12月 — 2025年9月",
 					list: {
-						1: "PostgreSQLとAppsmithを使用して、中央集約型データ追跡が可能な在庫管理システムをゼロから開発。",
-						2: "PythonおよびPowerShellスクリプトを作成して、日常の管理タスクを自動化。",
-						3: "Windows Server上のサーバーインフラを管理し、MS ExchangeおよびActive Directory DSを含む。",
-						4: "主要なサーバーおよびネットワーク機器のプロアクティブ監視のためにZabbixモニタリングシステムを実装。",
-						5: "MikroTikおよびTP-Linkベースのネットワークインフラを管理し、機器の設定を実施。",
-						6: "迅速な展開のために汎用Windowsイメージを使用してワークステーションの準備プロセスを最適化。"
+						1: "『PostgreSQL』と『Appsmith』を使用して、中央集約型データ追跡が可能な在庫管理システムをゼロから開発。",
+						2: "『Python』および『PowerShell』スクリプトを作成して、日常の管理タスクを自動化。",
+						3: "『Windows Server』上のサーバーインフラを管理し、『MS　Exchange』および『Active　Directory　DS』を含む。",
+						4: "主要なサーバーおよびネットワーク機器のプロアクティブ監視のために『Zabbix』モニタリングシステムを実装。",
+						5: "『MikroTik』および『TP-Link』ベースのネットワークインフラを管理し、機器の設定を実施。",
+						6: "迅速な展開のために汎用『Windows』イメージを使用してワークステーションの準備プロセスを最適化。"
+					}
+				},
+				3: {
+					name: "キーウ通信専門カレッジ",
+					position: "システム／ネットワーク管理者",
+					work_time: "2023年10月 — 2024年12月",
+					list : {
+						1: "『GNU/Linux』および『Windows』ベースのコンピュータ200台以上を管理",
+						2: "『Proxmox』上で仮想マシンを構築・運用し、『Docker』および『Podman』を用いてサービスを展開",
+						3: "『Portainer』を使用してコンテナ管理を構成",
+						4: "『Ansible』によりハードウェア操作を自動化",
+						5: "『Windows　Server』上に『Active　Directory』を構築し、集中型ユーザー管理とグループポリシーを設定",
+						6: "レガシーなハードウェアおよびソフトウェアの安定稼働を維持"
 					}
 				}
 			},
@@ -389,18 +416,6 @@ const messages = {
 				},
 				sysadmin: {
 					header: "DevOps／シスアドミン・スタック"
-				},
-				formating: {
-					year: {
-						1: "年",
-						2: "年",
-						3: "年"
-					},
-					month: {
-						1: "ヶ月",
-						2: "ヶ月",
-						3: "ヶ月"
-					}
 				}
 			}
 		},
@@ -473,7 +488,67 @@ const app = createApp({
             }
         });
 
-        return { locale, t, repos, error };
+
+		function getTranslCode(number) {
+			if (number == 1) {
+				return "1";
+			}
+
+			if (number < 5) {
+				return "2";
+			}
+
+			return "3";
+		}
+
+		function td(date1, date2 = new Date(), forWork = false) {
+			let years = date2.getFullYear() - date1.getFullYear();
+			let months = date2.getMonth() - date1.getMonth();
+
+			if (forWork) {
+				let yearsText = "";
+				let monthText = "";
+
+				if (months < 0) {
+					years--;
+					months += 12;
+				}
+
+				months++;
+
+				if (years > 0) {
+					const yearsTranslCode = getTranslCode(years);
+					yearsText = `${years} ${t(`formatting.year.${yearsTranslCode}`)}, `
+				}
+				
+				const monthTranslCode = getTranslCode(months);
+				monthText = `${months} ${t(`formatting.month.${monthTranslCode}`)}`
+
+				return `${yearsText}${monthText}`
+			}
+
+			if (months < 0) {
+				years--;
+				months += 12;
+			}
+
+			let gap, unitText;
+
+			if (years > 0) {
+				gap = years;
+				unitText = "year";
+			} else {
+				gap = months;
+				unitText = "month";
+			}
+
+			const translationCode = getTranslCode(gap);
+			let text = t(`formatting.${unitText}.${translationCode}`);
+
+			return `${gap} ${text}`;
+		}
+
+        return { locale, t, repos, error, td };
     }
 });
 

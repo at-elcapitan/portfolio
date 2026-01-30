@@ -89,22 +89,6 @@
                         </div>
                         <div class="author">{{ t('quoter.quotes.3.author') }}</div>
                     </div>
-
-                    <div class="quote slide">
-                        <div class="text-block">
-                             <div class="symbol">"</div>
-                            <div>{{ t('quoter.quotes.4.text') }}</div>
-                        </div>
-                        <div class="author">{{ t('quoter.quotes.4.author') }}</div>
-                    </div>
-
-                    <div class="quote slide">
-                        <div class="text-block">
-                            <div class="symbol">"</div>
-                            <div>{{ t('quoter.quotes.5.text') }}</div>
-                        </div>
-                        <div class="author">{{ t('quoter.quotes.5.author') }}</div>
-                    </div>
                 </div>
                 
                 <div class="self-section">
@@ -169,11 +153,12 @@
 							<div class="blocks">
 								<div class="block">
 									<div class="top-information">{{ t("about.work.1.work_time") }}</div>
+									<div class="top-information">({{ td(new Date(2025, 8, 12), new Date(), true) }})</div>
 									
 									<div class="block-wrapper">
 										<div class="block-topic">
 											<img src="static/work/2.png" class="tech-img" alt="">
-											<div class="name">{{ t("about.work.1.name") }}</div>
+											<a class="name" href="https://kyivstar.tech/" target="_blank">{{ t("about.work.1.name") }}</a>
 											<div class="subname">{{ t("about.work.1.position") }}</div>
 
 											<div class="cubic-wrapper">
@@ -204,11 +189,12 @@
 
 								<div class="block">
 									<div class="top-information">{{ t("about.work.2.work_time") }}</div>
+									<div class="top-information">({{ td(new Date(2024, 11, 21), new Date(2025, 8, 8), true) }})</div>
 									
 									<div class="block-wrapper">
 										<div class="block-topic">
 											<img src="static/work/1.jpg" class="tech-img" alt="">
-											<div class="name">{{ t("about.work.2.name") }}</div>
+											<a class="name" href="https://respublikapark.com.ua/" target="_blank">{{ t("about.work.2.name") }}</a>
 											<div class="subname">{{ t("about.work.2.position") }}</div>
 
 											<div class="cubic-wrapper">
@@ -231,7 +217,43 @@
 												<li>{{ t("about.work.2.list.3") }}</li>
 												<li>{{ t("about.work.2.list.4") }}</li>
 												<li>{{ t("about.work.2.list.5") }}</li>
-												<li id="techstack">{{ t("about.work.2.list.6") }}</li>
+												<li>{{ t("about.work.2.list.6") }}</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="block">
+									<div class="top-information">{{ t("about.work.3.work_time") }}</div>
+									<div class="top-information">({{ td(new Date(2023, 9, 6), new Date(2024, 11, 21), true) }})</div>
+									
+									<div class="block-wrapper">
+										<div class="block-topic">
+											<img src="static/work/3.jpg" class="tech-img" alt="">
+											<a class="name" href="https://sites.google.com/view/kkz" target="_blank">{{ t("about.work.3.name") }}</a>
+											<div class="subname">{{ t("about.work.3.position") }}</div>
+
+											<div class="cubic-wrapper">
+												<div class="cubic-item">
+													<img src="static/ad.png" alt="">
+												</div>
+												<div class="cubic-item">
+													<img src="static/linux.png" class="small" alt="">
+												</div>
+												<div class="cubic-item">
+													<img src="static/ansible.png" alt="">
+												</div>
+											</div>
+										</div>
+
+										<div class="text">
+											<ul>
+												<li>{{ t("about.work.3.list.1") }}</li>
+												<li>{{ t("about.work.3.list.2") }}</li>
+												<li>{{ t("about.work.3.list.3") }}</li>
+												<li>{{ t("about.work.3.list.4") }}</li>
+												<li>{{ t("about.work.3.list.5") }}</li>
+												<li id="techstack">{{ t("about.work.3.list.6") }}</li>
 											</ul>
 										</div>
 									</div>
@@ -259,7 +281,7 @@
 													Python
 												</div>
 
-												5 {{ t("about.showcase.formating.year.3") }}
+												{{ td(new Date(2020, 0, 1)) }}
 											</div>
 										</div>
 										<div class="labeled-cubic-container">
@@ -272,7 +294,7 @@
 													C
 												</div>
 
-												3 {{ t("about.showcase.formating.year.2") }}
+												{{ td(new Date(2023, 0, 1)) }}
 											</div>
 										</div>
 										<div class="labeled-cubic-container">
@@ -285,7 +307,7 @@
 													C++
 												</div>
 
-												3 {{ t("about.showcase.formating.year.2") }}
+												{{ td(new Date(2023, 0, 1)) }}
 											</div>
 										</div>
 										<div class="labeled-cubic-container">
@@ -298,7 +320,7 @@
 													C#
 												</div>
 
-												5 {{ t("about.showcase.formating.month.3") }}
+												{{ td(new Date(2024, 9, 1)) }}
 											</div>
 										</div>
 									</div>
@@ -314,7 +336,7 @@
 													FastAPI
 												</div>
 
-												4 {{ t("about.showcase.formating.month.2") }}
+												{{ td(new Date(2025, 6, 1)) }}
 											</div>
 										</div>
 
@@ -328,7 +350,7 @@
 													SQLAlchemy
 												</div>
 
-												4 {{ t("about.showcase.formating.month.2") }}
+												{{ td(new Date(2025, 6, 1)) }}
 											</div>
 										</div>
 
@@ -342,7 +364,7 @@
 													Vue.js
 												</div>
 
-												4 {{ t("about.showcase.formating.month.2") }}
+												{{ td(new Date(2025, 9, 1)) }}
 											</div>
 										</div>
 										
@@ -356,7 +378,7 @@
 													Flask
 												</div>
 
-												1 {{ t("about.showcase.formating.year.1") }}
+												{{ td(new Date(2023, 0, 1)) }}
 											</div>
 										</div>
 									</div>
@@ -379,7 +401,7 @@
 													Windows
 												</div>
 
-												5 {{ t("about.showcase.formating.year.3") }}
+												{{ td(new Date(2018, 0, 1)) }}
 											</div>
 										</div>
 
@@ -394,7 +416,7 @@
 													AD DC
 												</div>
 
-												1 {{ t("about.showcase.formating.year.1") }}
+												{{ td(new Date(2023, 9, 1)) }}
 											</div>
 										</div>
 										
@@ -408,7 +430,7 @@
 													Linux
 												</div>
 
-												1 {{ t("about.showcase.formating.year.1") }}
+												{{ td(new Date(2016, 0, 1)) }}
 											</div>
 										</div>
 										<div class="labeled-cubic-container">
@@ -421,7 +443,7 @@
 													FreeIPA
 												</div>
 
-												1 {{ t("about.showcase.formating.year.1") }}
+												{{ td(new Date(2025, 1, 1)) }}
 											</div>
 										</div>
 									</div>
@@ -437,7 +459,7 @@
 													OpenVPN
 												</div>
 
-												4 {{ t("about.showcase.formating.month.2") }}
+												{{ td(new Date(2025, 1, 1)) }}
 											</div>
 										</div>
 
@@ -451,7 +473,7 @@
 													ELK
 												</div>
 
-												4 {{ t("about.showcase.formating.month.2") }}
+												{{ td(new Date(2024, 7, 1)) }}
 											</div>
 										</div>
 										
@@ -465,7 +487,7 @@
 													Ansible
 												</div>
 
-												1 {{ t("about.showcase.formating.year.1") }}
+												{{ td(new Date(2024, 7, 1)) }}
 											</div>
 										</div>
 
@@ -479,7 +501,7 @@
 													Creatio
 												</div>
 
-												3 {{ t("about.showcase.formating.month.2") }}
+												{{ td(new Date(2025, 8, 1)) }}
 											</div>
 										</div>
 									</div>
