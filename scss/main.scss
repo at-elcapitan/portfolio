@@ -1,13 +1,11 @@
 @import url('font.css');
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
+    background-color: black;
     padding: 0;
     margin: 0;
     min-height: 100%;
@@ -18,23 +16,8 @@ body {
     width: 100%;
 }
 
-:root {
-    --vh: 100vh;
-}
-
-@supports (height: 100svh) {
-    :root {
-        --vh: 100svh;
-    }
-}
-
-@supports (height: 100dvh) {
-    :root {
-        --vh: 100dvh;
-    }
-}
-
 .app {
+    background-color: black;
     font-optical-sizing: auto;
     font-style: normal;
     width: 100%;
@@ -162,7 +145,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--vh);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,7 +206,7 @@ header {
 main {
     z-index: 1;
     margin-top: 0;
-    padding-top: var(--vh);
+    padding-top: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -268,7 +251,7 @@ main {
     }
 
     .quote {
-        padding: 40px;
+        padding: 35px 40px;
         position: relative;
         border: 1px solid transparent;
         border-radius: 15px;
@@ -280,6 +263,7 @@ main {
         transform: translateZ(0);
         font-size: 28px;
         width: 40%;
+        height: max-content;
         display: flex;
         flex-direction: column;
         transition: opacity 0.8s ease-out, transform 0.8s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
@@ -297,9 +281,8 @@ main {
         .author {
             color: rgb(138, 138, 138);
             font-size: 24px;
-            position: absolute;
-            right: 40px;
-            bottom: 10px;
+            width: 100%;
+            text-align: end;
         }
 
         &.active {
@@ -327,7 +310,6 @@ main {
 
             .author {
                 font-size: 20px;
-                right: 20px;
             }
         }
     }
@@ -343,7 +325,6 @@ main {
 }
 
 .self-section {
-    padding-bottom: 100px;
     background-image: url('../static/img2.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -352,6 +333,7 @@ main {
     position: sticky;
     color: white;
     width: 100%;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -686,8 +668,9 @@ main {
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 15px;
             flex-direction: row;
+            justify-content: start;
             gap: 35px;
-            width: 280px !important;
+            width: 300px !important;
             text-align: left;
         }
     }
@@ -724,22 +707,22 @@ main {
         height: 110px;
 
         img {
-            width: 55px * 2.35;
-            height: 55px * 2.35;
+            width: calc(55px * 2.35);
+            height: calc(55px * 2.35);
 
             &.small {
-                width: 35px * 2;
-                height: 35px * 2;
+                width: calc(35px * 2);
+                height: calc(35px * 2);
             }
 
             &.medium {
-                width: 50px * 2;
-                height: 50px * 2;
+                width: calc(50px * 2);
+                height: calc(50px * 2);
             }
 
             &.cubic {
-                width: 50px * 2;
-                height: 30px * 2;
+                width: calc(50px * 2);
+                height: calc(30px * 2);
                 transform: translateY(5px);
             }
         }
