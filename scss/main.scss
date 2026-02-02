@@ -32,7 +32,7 @@ img {
 }
 
 nav {
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,10 +71,17 @@ nav {
         position: absolute;
         right: 15px;
         background-color: transparent;
-        border: none;
         color: white;
+		border-radius: 1px;
+		border: none;
+		border-bottom: 1px solid transparent;
         -webkit-appearance: none;
         appearance: none;
+		transition: border-color 200ms;
+
+		&:hover {
+			border-bottom-color: rgba(255, 255, 255, 0.3);
+		}
     }
 
     .arrow-down {
@@ -144,6 +151,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+	z-index: 2;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -204,7 +212,6 @@ header {
 }
 
 main {
-    z-index: 1;
     margin-top: 0;
     padding-top: 100vh;
     width: 100%;
@@ -218,6 +225,7 @@ main {
     }
 
     .arrow-down {
+		z-index: 2;
         color: white;
         font-size: 2rem;
         position: absolute;
@@ -242,7 +250,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    z-index: 4;
+    z-index: 2;
     color: white;
 
     .quoter-header {
@@ -251,7 +259,7 @@ main {
     }
 
     .quote {
-        padding: 35px 40px;
+        padding: 20px 20px;
         position: relative;
         border: 1px solid transparent;
         border-radius: 15px;
@@ -262,7 +270,7 @@ main {
         isolation: isolate;
         transform: translateZ(0);
         font-size: 28px;
-        width: 40%;
+        width: 50%;
         height: max-content;
         display: flex;
         flex-direction: column;
@@ -279,6 +287,7 @@ main {
         }
 
         .author {
+			margin-top: 10px;
             color: rgb(138, 138, 138);
             font-size: 24px;
             width: 100%;
@@ -291,15 +300,15 @@ main {
         }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
         .quote {
-            width: 80%;
+            width: 70%;
         }
     }
 
     @media (max-width: 600px), (max-height: 600px) {
         .quote {
-            width: 70%;
+            width: 80%;
             font-size: 24px;
 
             .text-block {
@@ -325,12 +334,7 @@ main {
 }
 
 .self-section {
-    background-image: url('../static/img2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position: sticky;
+    position: relative;
     color: white;
     width: 100%;
     height: max-content;
@@ -338,6 +342,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+	.bg-img {
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		object-fit:cover;
+	}
 
     .about-block {
         padding-top: 100px;
@@ -720,6 +732,7 @@ footer {
     width: 100%;
     align-items: center;
     gap: 10px;
+	z-index: 1;
 
     .categories-block {
         width: 50%;
