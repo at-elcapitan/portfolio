@@ -69,7 +69,7 @@ nav {
     select {
         font-size: 16px;
         position: absolute;
-        right: 30px;
+        right: 15px;
         background-color: transparent;
         border: none;
         color: white;
@@ -348,7 +348,7 @@ main {
         align-items: center;
 
         .about {
-            padding: 20px;
+            padding: 15px;
             background-color: rgba(0, 0, 0, 0.5);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -377,7 +377,6 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-                margin-top: 10px;
 
                 .lang-name {
                     font-size: 20px;
@@ -521,29 +520,34 @@ main {
     }
 
     .blocks {
+        width: 100%;
+
         display: flex;
         flex-direction: column;
-        width: 100%;
-        gap: 20px;
         align-items: center;
+        gap: 15px;
 
         .block {
+            width: 100%;
+            padding: 15px;
+
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+
             .name {
                 font-size: 28px;
+				padding: 10px;
+				text-align: center;
             }
 
             &.gap {
                 gap: 15px;
             }
-
-            display: flex;
-            flex-direction: column;
-            width: 95%;
-            position: relative;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
 
             &.centered {
                 justify-content: center;
@@ -588,8 +592,7 @@ main {
                         text-decoration: none;
                         transition: 200ms border-color, 200ms background-color;
 
-                        &:hover,
-                        &:focus {
+                        &:hover, &:focus {
                             border: 1px solid rgba(255, 255, 255, 0.6);
                             background-color: rgba(255, 255, 255, 0.2);
                         }
@@ -622,67 +625,26 @@ main {
 }
 
 .cubic-wrapper {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-
-    &.more-items {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    &.extended-gap {
-        gap: 90px !important;
-    }
+    display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	justify-content: center;
 
     .labeled-cubic-container {
-        text-align: center;
-        display: flex;
-        padding: 15px 25px 15px 25px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        gap: 10px;
-        width: 120px;
+		padding: 15px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: start;
+		gap: 25px;
+		width: 290px;
+		text-align: left;
 
         .label {
             font-size: 20px;
             font-weight: 600;
-        }
-    }
-
-    @media (min-width: 450px) and (max-width: 1000px) {
-        &.change {
-            display: flex !important;
-            flex-direction: column;
-        }
-
-        &.extended-gap {
-            gap: 40px !important;
-        }
-
-        .labeled-cubic-container {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            flex-direction: row;
-            justify-content: start;
-            gap: 35px;
-            width: 300px !important;
-            text-align: left;
-        }
-    }
-
-    @media (max-width: 450px) {
-        &.change {
-            display: flex !important;
-            flex-direction: column;
-        }
-
-        &.extended-gap {
-            gap: 40px !important;
         }
     }
 }
@@ -823,6 +785,8 @@ footer {
     }
 
     .copyright {
+		display: flex;
+		flex-direction: column;
         text-align: center;
         color: rgb(66, 66, 66);
         font-size: 14px;

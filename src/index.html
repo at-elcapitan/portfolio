@@ -58,10 +58,10 @@
                 </div>
             </header>
 
-            <main id="content">
+            <main>
                 <a href="#content" id="scroll-arrow" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
 
-                <div class="quoter">
+                <div class="quoter" id="content">
                     <div class="quoter-header">
                         {{ t('quoter.header1') }} <u>{{ t('quoter.header2') }}</u>
                     </div>
@@ -270,7 +270,7 @@
 										{{ t("about.showcase.dev.header") }}
 									</div>
 
-									<div class="cubic-wrapper change more-items extended-gap">
+									<div class="cubic-wrapper change">
 										<div class="labeled-cubic-container">
 											<div class="cubic-item bigger round">
 												<img src="static/python-logo.webp" alt="">
@@ -323,9 +323,6 @@
 												{{ td(new Date(2024, 9, 1)) }}
 											</div>
 										</div>
-									</div>
-
-									<div class="cubic-wrapper change extended-gap more-items">
 										<div class="labeled-cubic-container">
 											<div class="cubic-item bigger round no-bg">
 												<img src="static/fastapi.svg" alt="">
@@ -382,15 +379,12 @@
 											</div>
 										</div>
 									</div>
-								</div>
 
-
-								<div class="block centered gap">
 									<div class="name">
 										{{ t("about.showcase.sysadmin.header") }}
 									</div>
 
-									<div class="cubic-wrapper change more-items extended-gap">
+									<div class="cubic-wrapper">
 										<div class="labeled-cubic-container">
 											<div class="cubic-item bigger round">
 												<img src="static/windows.png" alt="">
@@ -433,6 +427,7 @@
 												{{ td(new Date(2016, 0, 1)) }}
 											</div>
 										</div>
+
 										<div class="labeled-cubic-container">
 											<div class="cubic-item bigger round">
 												<img src="static/freeipa.png" class="medium" alt="">
@@ -446,9 +441,7 @@
 												{{ td(new Date(2025, 1, 1)) }}
 											</div>
 										</div>
-									</div>
 
-									<div class="cubic-wrapper change extended-gap more-items">
 										<div class="labeled-cubic-container">
 											<div class="cubic-item bigger round no-bg">
 												<img src="static/openvpn.png" alt="">
@@ -558,7 +551,7 @@
                     <hr>
         
                     <div class="copyright">
-                        © Vladislav "ElCapitan" Nazarov, 2025<br><br>The future is in our hands
+                        © Vladislav "ElCapitan" Nazarov, 2025 — 2026<br><br>The future is in our hands
                     </div>
                 </footer>
             </main>
