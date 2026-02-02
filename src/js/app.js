@@ -47,7 +47,16 @@ const messages = {
                 3: {
                     text: "Any excessively general statement in biology is false, including this one.",
                     author: "Alexander Panchin, scientist"
-                }
+                },
+				4: {
+					text: "An infantryman gets a ceremonial shovel\nWe raise the salaries of the deputies",
+					author: "Dmytro Odnorozhenko (hatespeech)\nfrom the song \"MPZD!\""
+				},
+				5: {
+					text: "People invented fire\nAnd since then everything burns",
+					author: "Dmytro Odnorozhenko (hatespeech)\nfrom the song \"Lying Slogans\""
+				}
+
             }
         },
         about: {
@@ -311,7 +320,16 @@ const messages = {
 				3: {
 					text: "生物学における過度に一般化された主張は、これも含めてすべて誤りである。",
 					author: "アレクサンドル・パンチン、科学者"
+				},
+				4: {
+					text: "歩兵には表彰用のシャベル\n我々は議員の給料を引き上げる",
+					author: "ドミトロ・オドノロジェンコ（ヘイトスピーチ）\n楽曲「MPZD!」より"
+				},
+				5: {
+					text: "人類は火を発明した\nそれ以来すべてが燃えている",
+					author: "ドミトロ・オドノロジェンコ（ヘイトスピーチ）\n楽曲「嘘のスローガン」より"
 				}
+
 			}
 		},
 		about: {
