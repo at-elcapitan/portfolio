@@ -1,0 +1,35 @@
+name: Deploy site to the server
+
+on:
+  push:
+  branches:
+    - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check
+        uses: actions/checkout@v3
+
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install depsendencies
+        run: npm ci
+
+      - name: Build
+        run: npx gulp build
+
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SRV_HOST }}
+          username: ${{ secrets.SRV_USER }}
+          key: ${{ secrets.SRV_USR_KEY }}
+          port: ${{ secrets.SRV_PORT }}
+          source: "dist/"
+          target: ${{ secrets.SRV_TARGET }}
