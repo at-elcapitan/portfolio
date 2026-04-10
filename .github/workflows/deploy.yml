@@ -2,8 +2,8 @@ name: Deploy site to the server
 
 on:
   push:
-  branches:
-    - main
+    branches:
+      - main
 
 jobs:
   build-deploy:
