@@ -31,20 +31,23 @@
 
     <body>
         <div id="app" class="app">
-            <nav id="nav">
-                <img src="./static/mountain.png" alt="">
-                <a href="#about">{{ t('nav.buttons.1') }}</a>
-                <a href="#experience">{{ t('nav.buttons.2') }}</a>
-				<a href="#techstack">{{ t('nav.buttons.3') }}</a>
+			<div class="nav-wrapper">
+				<nav id="nav">
+					<img src="./static/mountain.png" alt="">
+					
+					<a href="#about">{{ t('nav.buttons.1') }}</a>
+					<a href="#experience">{{ t('nav.buttons.2') }}</a>
+					<a href="#techstack">{{ t('nav.buttons.3') }}</a>
 
-                <select id="language-selector" v-model="locale">
-                    <option value="en">EN</option>
-                    <option value="ua">UA</option>
-					<option value="jp">JP</option>
-                </select>
+					<select id="language-selector" v-model="locale">
+						<option value="en">EN</option>
+						<option value="ua">UA</option>
+						<option value="jp">JP</option>
+					</select>
 
-                <a href="#header" id="nav-scroll-arrow" class="arrow-down rotate"><i class="fas fa-chevron-down"></i></a>
-            </nav>
+					<a href="#header" id="nav-scroll-arrow" class="arrow-down rotate"><i class="fas fa-chevron-down"></i></a>
+				</nav>
+			</div>
 
             <header id="header">
                 <div class="hello-world">
@@ -169,8 +172,41 @@
 
 							<div class="blocks">
 								<div class="block">
+									<div class="top-information">{{ t("about.work.4.work_time") }}</div>
+									<div class="top-information">({{ td(new Date(2026, 4, 15), new Date(), true) }})</div>
+									
+									<div class="block-wrapper">
+										<div class="block-topic">
+											<div class="tech-img bg">
+												<img src="static/work/4.png" class="small" alt="">
+											</div>
+											<a class="name" href="https://deloitte.com" target="_blank">{{ t("about.work.4.name") }}</a>
+											<div class="subname">{{ t("about.work.4.position") }}</div>
+
+											<div class="cubic-wrapper">
+												<div class="cubic-item">
+													<img src="static/creatio.png" alt="">
+												</div>
+												<div class="cubic-item">
+													<img src="static/docker.png" class="small" alt="">
+												</div>
+												<div class="cubic-item">
+													<img src="static/linux.png" class="small" alt="">
+												</div>
+											</div>
+										</div>
+
+										<div class="text">
+											<ul>
+												<li>{{ t("about.work.4.list.1") }}</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="block">
 									<div class="top-information">{{ t("about.work.1.work_time") }}</div>
-									<div class="top-information">({{ td(new Date(2025, 8, 12), new Date(), true) }})</div>
+									<div class="top-information">({{ td(new Date(2025, 8, 12), new Date(2026, 4, 14), true) }})</div>
 									
 									<div class="block-wrapper">
 										<div class="block-topic">
@@ -402,116 +438,21 @@
 									</div>
 
 									<div class="cubic-wrapper">
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/windows.png" alt="">
+										<div
+											class="labeled-cubic-container"
+											v-for="(item, index) in devopsStack"
+											:key="index"
+										>
+											<div
+											class="cubic-item bigger round"
+											:class="[item.class, { 'no-bg': item.noBg }]"
+											>
+												<img :src="item.img" :class="item.class" alt="" />
 											</div>
 
 											<div>
-												<div class="label">
-													Windows
-												</div>
-
-												{{ td(new Date(2018, 0, 1)) }}
-											</div>
-										</div>
-
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/ad.png" class="medium" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													AD DC
-												</div>
-
-												{{ td(new Date(2023, 9, 1)) }}
-											</div>
-										</div>
-										
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/linux.png" class="small" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													Linux
-												</div>
-
-												{{ td(new Date(2016, 0, 1)) }}
-											</div>
-										</div>
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/freeipa.png" class="medium" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													FreeIPA
-												</div>
-
-												{{ td(new Date(2025, 1, 1)) }}
-											</div>
-										</div>
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round no-bg">
-												<img src="static/openvpn.png" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													OpenVPN
-												</div>
-
-												{{ td(new Date(2025, 1, 1)) }}
-											</div>
-										</div>
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/elk.png" class="medium">
-											</div>
-
-											<div>
-												<div class="label">
-													ELK
-												</div>
-
-												{{ td(new Date(2024, 7, 1)) }}
-											</div>
-										</div>
-										
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/ansible.png" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													Ansible
-												</div>
-
-												{{ td(new Date(2024, 7, 1)) }}
-											</div>
-										</div>
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/creatio.png" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													Creatio
-												</div>
-
-												{{ td(new Date(2025, 8, 1)) }}
+												<div class="label">{{ item.name }}</div>
+												{{ td(new Date(...item.date)) }}
 											</div>
 										</div>
 									</div>

@@ -1,6 +1,32 @@
 const { createApp, ref, watch, onMounted } = Vue;
 const { createI18n, useI18n } = VueI18n;
 
+const devStack = [
+	{ name: "Python", img: "static/python-logo.webp", class: "", date: [2020, 0, 1] },
+	{ name: "C", img: "static/c.svg", class: "medium", date: [2023, 0, 1] },
+	{ name: "C++", img: "static/c++.png", class: "medium", date: [2023, 0, 1] },
+	{ name: "C#", img: "static/cs.png", class: "medium", date: [2024, 9, 1] },
+	{ name: "FastAPI", img: "static/fastapi.svg", noBg: true, date: [2025, 6, 1] },
+	{ name: "SQLAlchemy", img: "static/sqlalchemy.png", class: "small cubic", date: [2025, 6, 1] },
+	{ name: "Vue.js", img: "static/vue.png", class: "small", date: [2025, 9, 1] },
+	{ name: "Flask", img: "static/flask.png", class: "medium", date: [2023, 0, 1] }
+];
+
+const devopsStack = [
+	{ name: "Windows", img: "static/windows.png", date: [2018, 0, 1] },
+	{ name: "AD DC", img: "static/ad.png", class: "medium", date: [2023, 9, 1] },
+	{ name: "Linux", img: "static/linux.png", class: "small", date: [2016, 0, 1] },
+	{ name: "FreeIPA", img: "static/freeipa.png", class: "medium", date: [2025, 1, 1] },
+	{ name: "OpenVPN", img: "static/openvpn.png", noBg: true, date: [2025, 1, 1] },
+	{ name: "ELK", img: "static/elk.png", class: "medium", date: [2024, 7, 1] },
+	{ name: "PostgreSQL", img: "static/psql.png", class: "small", date: [2024, 6, 1] },
+	{ name: "Redis", img: "static/redis.png", class: "small", date: [2025, 8, 1] },
+	{ name: "Docker", img: "static/docker.png", class: "small", date: [2024, 0, 1] },
+	{ name: "Kubernetes", img: "static/k8s.svg", class: "small", date: [2026, 0, 1] },
+	{ name: "Ansible", img: "static/ansible.png", date: [2024, 7, 1] },
+	{ name: "Creatio", img: "static/creatio.png", date: [2025, 8, 1] }
+];
+
 const messages = {
     en: {
 		formatting: {
@@ -13,6 +39,9 @@ const messages = {
 				1: "month",
 				2: "month",
 				3: "month"
+			},
+			work: {
+				tba: "not yet started"
 			}
 		},
         nav : {
@@ -83,7 +112,7 @@ const messages = {
 				1: {
 					name: "Kyivstar.Tech, LLC",
 					position: "Senior System Administrator",
-					work_time: "September 2025 — now",
+					work_time: "September 2025 — May 2026",
 					list: {
 						1: "Ensure stable operation of the corporate infrastructure.",
 						2: "Maintain an information system based on Windows and Linux servers hosting the B2B CRM Creatio.",
@@ -117,6 +146,14 @@ const messages = {
 						4: "Automated hardware interaction using Ansible",
 						5: "Deployed Active Directory on Windows Server for centralized user management and configured Group Policies",
 						6: "Ensured stable operation of the legacy hardware/software"
+					}
+				},
+				4: {
+					name: "Deloitte CE",
+					position: "Middle DevOps Engineer",
+					work_time: "May 2026 — now",
+					list: {
+						1: "Comming soon..."
 					}
 				}
 			},
@@ -535,6 +572,10 @@ const app = createApp({
 				let yearsText = "";
 				let monthText = "";
 
+				if (date1 > date2) {
+					return t("formatting.work.tba");
+				}
+
 				if (months < 0) {
 					years--;
 					months += 12;
@@ -574,7 +615,7 @@ const app = createApp({
 			return `${gap} ${text}`;
 		}
 
-        return { locale, t, repos, error, td };
+        return { locale, t, repos, error, td, devopsStack, devStack };
     }
 });
 
