@@ -33,51 +33,30 @@ img {
 
 .nav-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 100;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.138);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.218);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 nav {
-    border-radius: 15px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
     box-sizing: border-box;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.74);
-    border: 1px solid rgb(48, 46, 46);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    height: 40px;
     display: flex;
     align-items: center;
-    padding-left: 15px;
     gap: 20px;
     transition: all 500ms;
     color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.433);
-
-    &.compect {
-        width: max-content !important;
-        height: 30px !important;
-        justify-content: center !important;
-        padding-right: 15px;
-        font-size: 14px;
-        gap: 15px;
-
-        img {
-            height: 100px;
-        }
-
-        .arrow-down {
-            display: none !important;
-        }
-    }
+    position: relative;
 
     a {
         font-size: 16px;
@@ -102,11 +81,9 @@ nav {
         color: white;
         font-size: 16px;
         position: absolute;
-        right: 15px;
+        right: 0;
         background-color: transparent;
-		border-radius: 1px;
 		border: none;
-		border-bottom: 1px solid transparent;
         -webkit-appearance: none;
         appearance: none;
 		transition: border-color 200ms;
@@ -127,19 +104,21 @@ nav {
 
     @media (max-width: 1000px) {
         justify-content: center;
+        width: 100% !important;
+        margin: 0 10px;
 
         img {
             position: absolute;
-            left: 10px;
-        }
-
-        a {
-            transform: translateX(-25%);
+            left: 0px;
         }
 
         .arrow-down {
             display: none !important;
         }
+    }
+
+    @media (max-width: 1400px) {
+        width: 90%;
     }
 
     @media (max-width: 600px) {
@@ -149,30 +128,7 @@ nav {
 
         select {
             font-size: 14px;
-            right: 20px;
         }
-    }
-}
-
-nav.white {
-    background-color: rgba(255, 255, 255, 0.445) !important;
-    color: rgb(0, 0, 0) !important;
-    border-color: rgb(126, 123, 123) !important;
-
-    a {
-        color: rgb(0, 0, 0) !important;
-    }
-
-    a:hover {
-        color: rgb(58, 58, 58) !important;
-    }
-
-    img {
-        filter: invert(0) !important;
-    }
-
-    select {
-        color: black !important;
     }
 }
 
@@ -192,19 +148,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
 
     .hello-world {
+        position: fixed;
         color: white;
-        margin: 50px;
+        left: 15%;
         font-size: 64px;
     }
 
     .info-card {
         color: rgb(168, 168, 168);
-        text-align: center;
-        top: 70px;
-        right: 10px;
-        position: absolute;
+        text-align: right;
+        top: 80px;
+        right: 15%;
+        position: fixed;
         font-size: 20px;
         width: 270px;
     }
@@ -219,19 +177,33 @@ header {
         object-fit: cover;
     }
 
+    @media (max-width: 1400px) {
+        .hello-world {
+            left: 5%;
+        }
+
+        .info-card {
+            right: 5%;
+        }
+    }
+
     @media (max-width: 1000px) {
         align-items: center;
+        justify-content: center;
 
         .hello-world {
+            left: 50% !important;
+            transform: translateX(-50%);
             font-size: 60px;
             text-align: center;
         }
 
         .info-card {
+            text-align: center;
             right: unset;
         }
     }
-
+    
     @media (max-height: 450px) {
         .info-card {
             display: none;
@@ -284,7 +256,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
     z-index: 2;
     color: white;
 
@@ -295,18 +267,17 @@ main {
 
     .quote {
 		white-space: pre-line;
-        padding: 20px 20px;
+        padding: 20px 0px;
         position: relative;
         border: 1px solid transparent;
         border-radius: 15px;
-        background-color: rgba(29, 28, 28, 0.72);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
         background-clip: padding-box;
         isolation: isolate;
         transform: translateZ(0);
         font-size: 28px;
-        width: 50%;
+        width: 70%;
         height: max-content;
         display: flex;
         flex-direction: column;
@@ -329,22 +300,24 @@ main {
             width: 100%;
             text-align: end;
         }
+    }
 
-        &.active {
-            background-color: rgba(50, 50, 50, 0.72);
-            transform: translateZ(0) scale(1.02);
+    @media (max-width: 1400px) {
+        .quote {
+            width: 90%;
         }
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1000px) {
         .quote {
-            width: 70%;
+            width: 100%;
+            padding: 15px;
         }
     }
 
     @media (max-width: 600px), (max-height: 600px) {
         .quote {
-            width: 80%;
+            width: 100%;
             font-size: 24px;
 
             .text-block {
@@ -403,25 +376,24 @@ main {
 
         .about {
             padding: 15px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.322);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
+            border-radius: 30px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0px 30px rgba(0, 0, 0, 0.368);
             width: 70%;
             display: flex;
             flex-direction: column;
             gap: 30px;
             position: relative;
             transform: translateY(20px);
+            overflow: hidden;
 
             .header {
                 width: fit-content;
                 font-size: 28px;
-                padding: 5px;
                 z-index: 2;
-                border-bottom: rgb(0, 199, 0) 2px solid;
             }
 
             .text {
@@ -549,7 +521,7 @@ main {
             }
         }
 
-        @media (max-width: 930px), (max-height: 650px) {
+        @media (max-width: 1000px), (max-height: 650px) {
             padding-top: 50px;
             padding-bottom: 50px;
             height: unset !important;
@@ -576,7 +548,6 @@ main {
 
     .blocks {
         width: 100%;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -590,8 +561,8 @@ main {
             flex-direction: column;
             position: relative;
 
-            background-color: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: rgba(0, 0, 0, 0.189);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 15px;
 
             .name {
@@ -691,12 +662,6 @@ main {
     }
 }
 
-@supports (-webkit-touch-callout: none) {
-    .self-section {
-        background-attachment: scroll;
-    }
-}
-
 .cubic-wrapper {
     display: flex;
 	gap: 15px;
@@ -784,8 +749,6 @@ main {
 }
 
 footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
     background-color: black;
     color: white;
     display: flex;
@@ -796,7 +759,8 @@ footer {
 	z-index: 1;
 
     .categories-block {
-        width: 50%;
+        width: 70%;
+        padding: 15px;
         display: flex;
         justify-content: space-between;
 
@@ -866,15 +830,21 @@ footer {
         font-size: 14px;
     }
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1400px) {
         .categories-block {
-            width: 95%;
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .categories-block {
+            width: 100%;
         }
     }
 
     @media (max-width: 800px) {
         .categories-block {
-            width: 85%;
+            width: 100%;
             flex-direction: column;
             gap: 50px;
             align-items: center;

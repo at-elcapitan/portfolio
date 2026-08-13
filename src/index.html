@@ -66,7 +66,7 @@
 
                 <div class="quoter" id="content">
                     <div class="quoter-header">
-                        {{ t('quoter.header1') }} <u>{{ t('quoter.header2') }}</u>
+                        <u>{{ t('quoter.header1') }} {{ t('quoter.header2') }}</u>
                     </div>
                     
                     <div class="quote slide active">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 
-                <div class="self-section">
+                <div class="self-section glass">
 					<img src="static/img2.jpg" alt="" class="bg-img">
                     <div class="about-block" id="about">
                         <div class="about slide">
@@ -515,7 +515,7 @@
             </main>
         </div>
 
-        <script src="js/app.js"></script>
+		<script src="js/app.js"></script>
         <script>
             const scroll = new SmoothScroll('a[href*="#"]', {
                 speed: 800,
@@ -537,23 +537,6 @@
                 } else {
                     header.style.display = 'flex';
                 }
-                
-                const aboutY = about.getBoundingClientRect().top;
-				const footerY = footer.getBoundingClientRect().top;
-
-				if (footerY <= 10) {
-					nav.classList.remove("white");
-				} else if (aboutY <= 10) {
-					nav.classList.add("white");
-				} else {
-					nav.classList.remove("white");
-				}
-
-                if (arrow.getBoundingClientRect().y <= 10) {
-                    navscroll.style.display = 'inherit';
-                } else {
-                    navscroll.style.display = 'none';
-                }
 
                 if (window.scrollY > 10) {
                     arrow.href = "#header";
@@ -561,28 +544,6 @@
                 } else {
                     arrow.href = "#content";
                     arrow.classList.remove('rotate');
-                }
-
-                const quotes = document.querySelectorAll('.quote');
-                const center = window.innerHeight / 2;
-
-                let closestQuote = null;
-                let closestDistance = Infinity;
-
-                quotes.forEach(quote => {
-                    const rect = quote.getBoundingClientRect();
-                    const quoteCenter = rect.top + rect.height / 2;
-                    const distance = Math.abs(quoteCenter - center);
-
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        closestQuote = quote;
-                    }
-                });
-
-                quotes.forEach(quote => quote.classList.remove('active'));
-                if (closestQuote) {
-                    closestQuote.classList.add('active');
                 }
             });
 
