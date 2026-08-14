@@ -13,7 +13,6 @@ const devStack = [
 ];
 
 const devopsStack = [
-	{ name: "Windows", img: "static/windows.png", date: [2018, 0, 1] },
 	{ name: "AD DC", img: "static/ad.png", class: "medium", date: [2023, 9, 1] },
 	{ name: "Linux", img: "static/linux.png", class: "small", date: [2016, 0, 1] },
 	{ name: "FreeIPA", img: "static/freeipa.png", class: "medium", date: [2025, 1, 1] },
@@ -151,9 +150,14 @@ const messages = {
 				4: {
 					name: "Deloitte CE",
 					position: "Middle DevOps Engineer",
-					work_time: "May 2026 — now",
+					work_time: "May 2026 — August 2026",
 					list: {
-						1: "Comming soon..."
+						1: "Automated local Creatio deployments",
+    					2: "Designed the project's Git Flow strategy",
+    					3: "Developed CI/CD pipelines in Azure DevOps and Jenkins",
+    					4: "Worked on implementing of an ephemeral AWS test environment with Terraform and Packer",
+    					5: "Created detailed documentation for projects",
+    					6: "Prepared onboarding guides for new developers"
 					}
 				}
 			},
@@ -290,6 +294,19 @@ const messages = {
 						4: "Автоматизував взаємодію з ПК за допомогою Ansible",
 						5: "Розгорнув Active Directory на Windows Server для централізованого керування користувачами та налаштував групові політики",
 						6: "Забезпечував стабільну роботу застарілого апаратного та програмного забезпечення"
+					}
+				},
+				4: {
+					name: "Deloitte CE",
+					position: "Middle DevOps-інженер",
+					work_time: "Травень 2026 — Серпень 2026",
+					list: {
+						1: "Автоматизував локальне розгортання Creatio",
+						2: "Розробив стратегію Git Flow для проєкту",
+						3: "Розробив CI/CD пайплайни в Azure DevOps та Jenkins",
+						4: "Працював над створенням та впровадженням тимчасового тестового середовища в AWS за допомогою Terraform та Packer",
+						5: "Створив детальну документацію для проєктів",
+						6: "Підготував інструкції з адаптації для нових розробників"
 					}
 				}
 			},
@@ -469,6 +486,19 @@ const messages = {
 						4: "『Ansible』によりハードウェア操作を自動化",
 						5: "『Windows　Server』上に『Active　Directory』を構築し、集中型ユーザー管理とグループポリシーを設定",
 						6: "レガシーなハードウェアおよびソフトウェアの安定稼働を維持"
+					}
+				},
+				4: {
+					name: "Deloitte CE",
+					position: "Middle DevOpsエンジニア",
+					work_time: "2026年5月 — 2026年8月",
+					list: {
+						1: "ローカル環境でのCreatioのデプロイを自動化しました",
+						2: "プロジェクトのGit Flow戦略を設計しました",
+						3: "Azure DevOpsとJenkinsでCI/CDパイプラインを構築しました",
+						4: "TerraformとPackerを使用して、AWSのエフェメラルなテスト環境の構築に取り組みました",
+						5: "プロジェクトの詳細なドキュメントを作成しました",
+						6: "新しい開発者向けのオンボーディングガイドを作成しました"
 					}
 				}
 			},

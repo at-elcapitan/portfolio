@@ -173,7 +173,7 @@
 							<div class="blocks">
 								<div class="block">
 									<div class="top-information">{{ t("about.work.4.work_time") }}</div>
-									<div class="top-information">({{ td(new Date(2026, 4, 15), new Date(), true) }})</div>
+									<div class="top-information">({{ td(new Date(2026, 4, 15), new Date(2026, 8, 31), false) }})</div>
 									
 									<div class="block-wrapper">
 										<div class="block-topic">
@@ -199,6 +199,11 @@
 										<div class="text">
 											<ul>
 												<li>{{ t("about.work.4.list.1") }}</li>
+												<li>{{ t("about.work.4.list.2") }}</li>
+												<li>{{ t("about.work.4.list.3") }}</li>
+												<li>{{ t("about.work.4.list.4") }}</li>
+												<li>{{ t("about.work.4.list.5") }}</li>
+												<li>{{ t("about.work.4.list.6") }}</li>
 											</ul>
 										</div>
 									</div>
@@ -323,112 +328,22 @@
 										{{ t("about.showcase.dev.header") }}
 									</div>
 
-									<div class="cubic-wrapper change">
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/python-logo.webp" alt="">
+									<div class="cubic-wrapper">
+										<div
+											class="labeled-cubic-container"
+											v-for="(item, index) in devStack"
+											:key="index"
+										>
+											<div
+											class="cubic-item bigger round"
+											:class="[item.class, { 'no-bg': item.noBg }]"
+											>
+												<img :src="item.img" :class="item.class" alt="" />
 											</div>
 
 											<div>
-												<div class="label">
-													Python
-												</div>
-
-												{{ td(new Date(2020, 0, 1)) }}
-											</div>
-										</div>
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/c.svg" class="medium" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													C
-												</div>
-
-												{{ td(new Date(2023, 0, 1)) }}
-											</div>
-										</div>
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/c++.png" class="medium" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													C++
-												</div>
-
-												{{ td(new Date(2023, 0, 1)) }}
-											</div>
-										</div>
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/cs.png" class="medium" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													C#
-												</div>
-
-												{{ td(new Date(2024, 9, 1)) }}
-											</div>
-										</div>
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round no-bg">
-												<img src="static/fastapi.svg" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													FastAPI
-												</div>
-
-												{{ td(new Date(2025, 6, 1)) }}
-											</div>
-										</div>
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/sqlalchemy.png" class="small cubic" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													SQLAlchemy
-												</div>
-
-												{{ td(new Date(2025, 6, 1)) }}
-											</div>
-										</div>
-
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/vue.png" class="small" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													Vue.js
-												</div>
-
-												{{ td(new Date(2025, 9, 1)) }}
-											</div>
-										</div>
-										
-										<div class="labeled-cubic-container">
-											<div class="cubic-item bigger round">
-												<img src="static/flask.png" class="medium" alt="">
-											</div>
-
-											<div>
-												<div class="label">
-													Flask
-												</div>
-
-												{{ td(new Date(2023, 0, 1)) }}
+												<div class="label">{{ item.name }}</div>
+												{{ td(new Date(...item.date)) }}
 											</div>
 										</div>
 									</div>
@@ -493,7 +408,7 @@
 
                             <div class="category">
                                 <div class="name">{{ t("footer.title.3") }}</div>
-                                <a class="item" href="https://gitea.atproject.com.ua/elcapitan/about-me" target="_blank"><img src="static/gitea.png">Repository</a>
+                                <a class="item" href="https://github.com/at-elcapitan/portfolio" target="_blank"><img src="static/github-logo.png">Portfolio</a>
                             </div>
                         </div>
         
@@ -501,7 +416,6 @@
                             <div class="name">{{ t("footer.title.4") }}</div>
                             <a class="item" href="https://x.com/vladelcapitan" target="_blank"><img src="static/x.png">vladelcapitan</a>
                             <a class="item" href="https://github.com/at-elcapitan" target="_blank"><img src="static/github-logo.png">at-elcapitan</a>
-                            <a class="item" href="https://gitea.atproject.com.ua/elcapitan" target="_blank"><img src="static/gitea.png">elcapitan</a>
                             <a class="item" href="mailto:elcapitan@atproject.com.ua" target="_blank"><img src="static/mail.png">elcapitan@atproject.com.ua</a>
                         </div>
                     </div>
@@ -522,12 +436,8 @@
                 speedAsDuration: true
             });
 
-            const navscroll = document.getElementById('nav-scroll-arrow');
             const arrow = document.getElementById('scroll-arrow');
             const header = document.getElementById('header');
-            const about = document.getElementById('about');
-            const nav = document.getElementById('nav');
-			const footer = document.getElementById('links');
 
             window.addEventListener('scroll', () => {
                 const currentScrollTop = window.scrollY;
