@@ -43,6 +43,7 @@
 						<option value="en">EN</option>
 						<option value="ua">UA</option>
 						<option value="jp">JP</option>
+						<option value="pl">PL</option>
 					</select>
 
 					<a href="#header" id="nav-scroll-arrow" class="arrow-down rotate"><i class="fas fa-chevron-down"></i></a>
@@ -50,6 +51,7 @@
 			</div>
 
             <header id="header">
+				<div class="background-image"></div>
                 <div class="hello-world">
                     {{ t("hello.parts.1") }}<br>
                     <span style="color: rgb(255, 243, 138);">{{ t("hello.parts.name") }}</span><br>
@@ -66,7 +68,7 @@
 
                 <div class="quoter" id="content">
                     <div class="quoter-header">
-                        <u>{{ t('quoter.header1') }} {{ t('quoter.header2') }}</u>
+                        {{ t('quoter.header1') }} {{ t('quoter.header2') }}
                     </div>
                     
                     <div class="quote slide active">
@@ -113,88 +115,89 @@
                 <div class="self-section glass">
 					<img src="static/img2.jpg" alt="" class="bg-img">
                     <div class="about-block" id="about">
-                        <div class="about slide">
-                            <div class="header">
-                                {{ t("about.header") }}
-                            </div>
-
-							<div class="text">
-								{{ t("about.textblocks.1") }}
-							</div>
-
-							<div class="text">
-								{{ t("about.textblocks.2") }}
-							</div>
-
-							<div class="text">
-								{{ t("about.textblocks.3") }}
-							</div>
-
-                            <div class="header">
-                                {{ t("about.lang.header") }}
-                            </div>
-
-                            <div class="languages">
-                                <div class="language">
-                                    <div class="lang-name">{{ t("about.lang.1.name") }}</div>
-
-                                    <div class="level">
-                                        <div class="name p5 slide">C1</div>
-                                    </div>
-
-                                    <div class="progress p5 yellow slide"></div>
-                                </div>
-
-                                <div class="language">
-                                    <div class="lang-name">{{ t("about.lang.2.name") }}</div>
-
-                                    <div class="level">
-                                        <div class="name p4 slide">B2</div>
-                                    </div>
-
-                                    <div class="progress p4 red slide"></div>
-                                </div>
-
-                                <div class="language">
-                                    <div class="lang-name">{{ t("about.lang.3.name") }}</div>
-
-                                    <div class="level">
-                                        <div class="name p5-1 slide">N5</div>
-                                    </div>
-
-                                    <div class="progress p5-1 gunjyou slide" id="experience"></div>
-                                </div>
-                            </div>
-
-							<div class="header">
-                           		{{ t("about.work.header") }}
-							</div>
-
+							<div class="about slide">
 							<div class="blocks">
+								<div class="header">
+									{{ t("about.header") }}
+								</div>
 								<div class="block">
-									<div class="top-information">{{ t("about.work.4.work_time") }}</div>
-									<div class="top-information">({{ td(new Date(2026, 4, 15), new Date(2026, 8, 31), false) }})</div>
-									
-									<div class="block-wrapper">
-										<div class="block-topic">
-											<div class="tech-img bg">
-												<img src="static/work/4.png" class="small" alt="">
-											</div>
-											<a class="name" href="https://deloitte.com" target="_blank">{{ t("about.work.4.name") }}</a>
-											<div class="subname">{{ t("about.work.4.position") }}</div>
+									<div class="text">
+										{{ t("about.textblocks.1") }}
+									</div>
 
-											<div class="cubic-wrapper">
-												<div class="cubic-item">
-													<img src="static/creatio.png" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/docker.png" class="small" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/linux.png" class="small" alt="">
-												</div>
+									<div class="text">
+										{{ t("about.textblocks.2") }}
+									</div>
+
+									<div class="text">
+										{{ t("about.textblocks.3") }}
+									</div>
+								</div>
+
+								<div class="header">
+									{{ t("about.lang.header") }}
+								</div>
+
+								<div class="block">
+									<div class="languages">
+										<div class="language">
+											<div class="lang-name">{{ t("about.lang.1.name") }}</div>
+
+											<div class="level">
+												<div class="progress p6 yellow slide"></div>
+												<div class="lang-level-name">Native</div>
 											</div>
 										</div>
+
+										<div class="language">
+											<div class="lang-name">{{ t("about.lang.2.name") }}</div>
+
+											<div class="level">
+												<div class="progress p4 red slide"></div>
+												<div class="lang-level-name">B2</div>
+											</div>
+										</div>
+
+										<div class="language">
+											<div class="lang-name">{{ t("about.lang.3.name") }}</div>
+											
+
+											<div class="level">
+												<div class="progress p5-1 gunjyou slide" id="experience"></div>
+												<div class="lang-level-name">N5</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="header">
+									{{ t("about.work.header") }}
+								</div>
+
+								<div class="block row">
+									<div class="block-topic">
+										<div class="tech-img bg">
+											<img src="static/work/4.png" class="small" alt="">
+										</div>
+										<a class="name" href="https://deloitte.com" target="_blank">{{ t("about.work.4.name") }}</a>
+										<div class="subname">{{ t("about.work.4.position") }}</div>
+
+										<div class="cubic-wrapper">
+											<div class="cubic-item">
+												<img src="static/creatio.png" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/docker.png" class="small" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/linux.png" class="small" alt="">
+											</div>
+										</div>
+									</div>
+									
+									<div class="block-wrapper">
+										<div class="top-information">{{ t("about.work.4.work_time") }}</div>
+										<div class="top-information">({{ td(new Date(2026, 4, 15), new Date(2026, 8, 31), false) }})</div>
 
 										<div class="text">
 											<ul>
@@ -209,28 +212,28 @@
 									</div>
 								</div>
 
-								<div class="block">
-									<div class="top-information">{{ t("about.work.1.work_time") }}</div>
-									<div class="top-information">({{ td(new Date(2025, 8, 12), new Date(2026, 4, 14), true) }})</div>
-									
-									<div class="block-wrapper">
-										<div class="block-topic">
-											<img src="static/work/2.png" class="tech-img" alt="">
-											<a class="name" href="https://kyivstar.tech/" target="_blank">{{ t("about.work.1.name") }}</a>
-											<div class="subname">{{ t("about.work.1.position") }}</div>
+								<div class="block row">
+									<div class="block-topic">
+										<img src="static/work/2.png" class="tech-img" alt="">
+										<a class="name" href="https://kyivstar.tech/" target="_blank">{{ t("about.work.1.name") }}</a>
+										<div class="subname">{{ t("about.work.1.position") }}</div>
 
-											<div class="cubic-wrapper">
-												<div class="cubic-item">
-													<img src="static/linux.png" class="small" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/windows.png" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/creatio.png" class="medium" alt="">
-												</div>
+										<div class="cubic-wrapper">
+											<div class="cubic-item">
+												<img src="static/linux.png" class="small" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/windows.png" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/creatio.png" class="medium" alt="">
 											</div>
 										</div>
+									</div>
+
+									<div class="block-wrapper">
+										<div class="top-information">{{ t("about.work.1.work_time") }}</div>
+										<div class="top-information">({{ td(new Date(2025, 8, 12), new Date(2026, 4, 14), true) }})</div>
 
 										<div class="text">
 											<ul>
@@ -245,28 +248,28 @@
 									</div>
 								</div>
 
-								<div class="block">
-									<div class="top-information">{{ t("about.work.2.work_time") }}</div>
-									<div class="top-information">({{ td(new Date(2024, 11, 21), new Date(2025, 8, 8), true) }})</div>
-									
-									<div class="block-wrapper">
-										<div class="block-topic">
-											<img src="static/work/1.jpg" class="tech-img" alt="">
-											<a class="name" href="https://respublikapark.com.ua/" target="_blank">{{ t("about.work.2.name") }}</a>
-											<div class="subname">{{ t("about.work.2.position") }}</div>
+								<div class="block row">
+									<div class="block-topic">
+										<img src="static/work/1.jpg" class="tech-img" alt="">
+										<a class="name" href="https://respublikapark.com.ua/" target="_blank">{{ t("about.work.2.name") }}</a>
+										<div class="subname">{{ t("about.work.2.position") }}</div>
 
-											<div class="cubic-wrapper">
-												<div class="cubic-item">
-													<img src="static/windows.png" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/exchange.png" class="small" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/zabbix.webp" alt="">
-												</div>
+										<div class="cubic-wrapper">
+											<div class="cubic-item">
+												<img src="static/windows.png" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/exchange.png" class="small" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/zabbix.webp" alt="">
 											</div>
 										</div>
+									</div>
+									
+									<div class="block-wrapper">
+										<div class="top-information">{{ t("about.work.2.work_time") }}</div>
+										<div class="top-information">({{ td(new Date(2024, 11, 21), new Date(2025, 8, 8), true) }})</div>
 
 										<div class="text">
 											<ul>
@@ -281,28 +284,28 @@
 									</div>
 								</div>
 
-								<div class="block">
-									<div class="top-information">{{ t("about.work.3.work_time") }}</div>
-									<div class="top-information">({{ td(new Date(2023, 9, 6), new Date(2024, 11, 21), true) }})</div>
-									
-									<div class="block-wrapper">
-										<div class="block-topic">
-											<img src="static/work/3.jpg" class="tech-img" alt="">
-											<a class="name" href="https://sites.google.com/view/kkz" target="_blank">{{ t("about.work.3.name") }}</a>
-											<div class="subname">{{ t("about.work.3.position") }}</div>
+								<div class="block row">
+									<div class="block-topic">
+										<img src="static/work/3.jpg" class="tech-img" alt="">
+										<a class="name" href="https://sites.google.com/view/kkz" target="_blank">{{ t("about.work.3.name") }}</a>
+										<div class="subname">{{ t("about.work.3.position") }}</div>
 
-											<div class="cubic-wrapper">
-												<div class="cubic-item">
-													<img src="static/ad.png" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/linux.png" class="small" alt="">
-												</div>
-												<div class="cubic-item">
-													<img src="static/ansible.png" alt="">
-												</div>
+										<div class="cubic-wrapper">
+											<div class="cubic-item">
+												<img src="static/ad.png" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/linux.png" class="small" alt="">
+											</div>
+											<div class="cubic-item">
+												<img src="static/ansible.png" alt="">
 											</div>
 										</div>
+									</div>
+									
+									<div class="block-wrapper">
+										<div class="top-information">{{ t("about.work.3.work_time") }}</div>
+										<div class="top-information">({{ td(new Date(2023, 9, 6), new Date(2024, 11, 21), true) }})</div>
 
 										<div class="text">
 											<ul>
@@ -316,13 +319,11 @@
 										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="header">
-                           		{{ t("about.showcase.header") }}
-							</div>
+								<div class="header">
+									{{ t("about.showcase.header") }}
+								</div>
 
-							<div class="blocks">
 								<div class="block centered gap">
 									<div class="name">
 										{{ t("about.showcase.dev.header") }}
