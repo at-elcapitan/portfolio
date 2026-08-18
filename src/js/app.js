@@ -104,7 +104,10 @@ const messages = {
                 },
                 3: {
                     name: "Japaneese"
-                }
+                },
+				4: {
+					name: "Polish"
+				}
             },
 			work: {
 				header: "Work Experience",
@@ -253,7 +256,10 @@ const messages = {
                 },
                 3: {
                     name: "Японська"
-                }
+                },
+				4: {
+					name: "Польська"
+				}
             },
 			work: {
 				header: "Досвід роботи",
@@ -403,6 +409,9 @@ const messages = {
 				},
 				3: {
 					name: "日本語"
+				},
+				4: {
+					name: "ポーランド語"
 				}
 			},
 			skills: {
@@ -597,6 +606,9 @@ const messages = {
 				},
 				3: {
 					name: "Japoński"
+				},
+				4: {
+					name: "Polski"
 				}
 			},
 			work: {
