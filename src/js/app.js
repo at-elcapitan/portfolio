@@ -91,7 +91,7 @@ const messages = {
             header: "About me",
             textblocks: {
                     "1": "Hi! I'm Vladislav Nazarov, also known as ElCaptain or John. I'm a programmer and system administrator with over six years of experience. Since 2018, I've been creating various pet projects: Linux installation automation systems, Telegram bots for integration with camera security systems, as well as web applications. Most often, I work with Python, C, Bash Script, and I enjoy studying tools like Ansible, Docker, Podman, and Proxmox.",
-                    "2": "Currently, I'm a Senior System Administrator at Kyivstar.Tech and I'm responsible for the stable operation of the corporate infrastructure. I maintain the information system based on Windows and Linux servers hosting the B2B CRM Creatio. I handle automation of requests, routine tasks, and support the security and reliability of the system.",
+                    "2": "Currently, I'm a DevOps Engineer at Deloitte, where I'm responsible for project enablement. I maintain project environments in Azure DevOps and similar platforms, configure and test CI/CD pipelines, and design Git Flow strategies. I also work on employee onboarding and it's automation, create technical documentation, and work on useful and DevOps-related side projects.",
                     "3": "In my free time, I learn to play the guitar, create new pet projects, and experiment with DevOps technologies. I have volunteer experience in charitable organizations and was also active in student self-government, which helped me develop organizational skills and team spirit."
             },
             lang : {
@@ -152,7 +152,7 @@ const messages = {
 				},
 				4: {
 					name: "Deloitte CE",
-					position: "Middle DevOps Engineer",
+					position: "DevOps Engineer",
 					work_time: "May 2026 — August 2026",
 					list: {
 						1: "Automated local Creatio deployments",
@@ -243,7 +243,7 @@ const messages = {
             header: "Про мене",
             textblocks: {
                 1: "Привіт! Я — Владислав Назаров, але мене також знають під псевдонімами Ель-Капітан або Джон. Я програміст і системний адміністратор із досвідом понад шість років. Починаючи з 2018 року, створюю різні пет-проєкти: системи автоматизації встановлення Linux, телеграм-ботів для інтеграції з системами безпеки, а також вебзастосунки. Найчастіше працюю з Python, C, Bash Script, люблю використовувати інструменти на кшталт Ansible, Docker, Podman і Proxmox.",
-                2: "Зараз я системний адміністратор у компанії Київстар.Тех і відповідаю за стабільну роботу корпоративної інфраструктури. Підтримую інформаційну систему на базі Windows та Linux серверах, які хостять B2B CRM Creatio. Займаюсь автоматизацією запитів, рутинних справ та підтримую рівень безпеки та надійності системи.",
+                2: "Наразі я працюю DevOps-інженером у Deloitte, де відповідаю за забезпечення та підтримку проєктів з боку DevOps. Я підтримую проєктні середовища в Azure DevOps та подібних платформах, налаштовую й тестую CI/CD-пайплайни та розробляю стратегії Git Flow. Також я займаюся допомогою з онбордингом нових співробітників та його автоматизацією, створюю технічну документацію та працюю над корисними й пов’язаними з DevOps сторонніми проєктами.",
                 3: "У вільний час вчуся грати на гітарі, створюю нові пет-проєкти, експериментую з DevOps-технологіями. Маю волонтерський досвід у благодійних організаціях, а також був активним у студентському самоврядуванні, що допомогло мені розвинути організаторські здібності та командний дух."
 			},
             lang : {
@@ -304,7 +304,7 @@ const messages = {
 				},
 				4: {
 					name: "Deloitte CE",
-					position: "Middle DevOps-інженер",
+					position: "DevOps-інженер",
 					work_time: "Травень 2026 — Серпень 2026",
 					list: {
 						1: "Автоматизував локальне розгортання Creatio",
@@ -396,7 +396,7 @@ const messages = {
 			header: "私について",
 			textblocks: {
 				"1": "よー！ウラディスラフ『ElCaptain』ナザロフで、ジョンとしても呼ばれます。6年以上の経験を持つプログラマー兼システム管理者です。2018年から、『Linux』インストール自動化システム、カメラ監視との連携用Telegramボット、Webアプリケーションなど、さまざまな個人プロジェクトを作成してきました。主に 『Python』、『C』、『Bash　Script』 を使用し、『Ansible』、『Docker』、『Podman』、『Proxmox』といったツールの学習を楽しんでいます。",
-				"2": "現在、『Kyivstar.Tech』のシニアシステム管理者として、企業インフラの安定稼働を担当しています。『Windows』および『Linux』サーバー上で稼働する『CRM　Creatio』の情報システムを維持管理しています。リクエストの自動化、日常作業の効率化、システムのセキュリティと信頼性の確保を行っています。",
+				"2": "現在、DeloitteでDevOps Engineerとして働いており、プロジェクトのDevOps環境の整備・支援を担当しています。Azure DevOpsなどのプラットフォームでプロジェクト環境を管理し、CI/CDパイプラインの構築・設定・テストや、Git Flow戦略の設計を行っています。また、新入社員のオンボーディングやその自動化、技術ドキュメントの作成にも携わっており、DevOpsに関連する実用的なサイドプロジェクトにも取り組んでいます。",
 				"3": "自由時間にはギターを練習したり、新しい個人プロジェクトを作成したり、DevOps技術の実験を行っています。また、慈善団体でのボランティア経験があり、学生自治組織で積極的に活動していたため、組織力とチームワークを身につけることができました。"
 			},
 			lang: {
@@ -499,7 +499,7 @@ const messages = {
 				},
 				4: {
 					name: "Deloitte CE",
-					position: "Middle DevOpsエンジニア",
+					position: "DevOpsエンジニア",
 					work_time: "2026年5月 — 2026年8月",
 					list: {
 						1: "ローカル環境でのCreatioのデプロイを自動化しました",
@@ -593,7 +593,7 @@ const messages = {
 			header: "O mnie",
 			textblocks: {
 				"1": "Cześć! Jestem Władysław Nazarow, znany również jako ElCaptain albo John. Jestem programistą i administratorem systemów z ponad sześcioma latami doświadczenia. Od 2018 roku tworzę różne projekty poboczne: systemy automatyzacji instalacji Linux, boty Telegram do integracji z systemami bezpieczeństwa wizyjnego, a także aplikacje webowe. Najczęściej pracuję z Pythonem, C, Bash Script i lubię poznawać narzędzia takie jak Ansible, Docker, Podman i Proxmox.",
-				"2": "Obecnie pracuję jako Starszy Administrator Systemów w Kyivstar.Tech i odpowiadam za stabilną pracę infrastruktury korporacyjnej. Obsługuję system informacyjny oparty na serwerach Windows i Linux, na których działa B2B CRM Creatio. Zajmuję się automatyzacją zgłoszeń, rutynowych zadań oraz zapewnieniem bezpieczeństwa i niezawodności systemu.",
+				"2": "Obecnie pracuję jako DevOps Engineer w Deloitte, gdzie odpowiadam za wsparcie i rozwój projektów od strony DevOps. Utrzymuję środowiska projektowe w Azure DevOps i podobnych platformach, konfiguruję i testuję potoki CI/CD oraz projektuję strategie Git Flow. Zajmuję się również pomocu z onboardingiem nowych pracowników i jego automatyzacją, tworzę dokumentację techniczną oraz pracuję nad przydatnymi i związanymi z DevOps projektami pobocznymi.",
 				"3": "W wolnym czasie uczę się grać na gitarze, tworzę nowe projekty poboczne i eksperymentuję z technologiami DevOps. Mam doświadczenie wolontariatu w organizacjach charytatywnych oraz byłem aktywny w samorządzie studenckim, co pomogło mi rozwijać umiejętności organizacyjne i ducha zespołu."
 			},
 			lang: {
@@ -684,6 +684,161 @@ const messages = {
 				4: "Kontakt"
 			}
 		}
+	},
+	by: {
+		formatting: {
+			year: {
+				1: "год",
+				2: "гады",
+				3: "гадоў"
+			},
+			month: {
+				1: "месяц",
+				2: "месяцы",
+				3: "месяцаў"
+			},
+			work: {
+				tba: "яшчэ не пачата"
+			}
+		},
+		nav: {
+			buttons: {
+				1: "Пра мяне",
+				2: "Вопыт",
+				3: "Вітрына вед"
+			}
+		},
+		hello: {
+			parts: {
+				1: "Вітаю, я",
+				2: "Гітарыст",
+				3: "Распрацоўшчык",
+				4: "Эль-Капітан",
+				name: "Уладзіслаў"
+			},
+			infocard: "ЗША, Нацыянальны парк Ёсеміці, гара Эль-Капітан"
+		},
+		quoter: {
+			header1: "Любімыя",
+			header2: "цытаты",
+			quotes: {
+				1: {
+					text: "Мы — сума ўсіх нашых учынкаў, выратаванне ўнутры нас.",
+					author: "Alek OS, ютубер"
+				},
+				2: {
+					text: "Калі вы хочаце зрабіць нешта незвычайнае, нешта значна большае за прадказальнае, вам патрэбныя незвычайныя ўмовы.",
+					author: "Андрэй Даронічэў, распрацоўшчык"
+				},
+				3: {
+					text: "Любое празмерна агульнае сцвярджэнне ў біялогіі памылкова, уключаючы гэтае.",
+					author: "Аляксандр Панчын, вучоны"
+				},
+				4: {
+					text: "Пехацінцу даюць цырыманіяльную рыдлёўку\nМы павышаем заробкі дэпутатам",
+					author: "Дзмітрый Аднарожэнка (хейтспіч)\nз песні \"МПЗД!\""
+				},
+				5: {
+					text: "Людзі вынайшлі агонь\nІ з таго часу ўсё гарыць",
+					author: "Дзмітрый Аднарожэнка (хейтспіч)\nз песні \"Хлуслівыя лозунгі\""
+				}
+			}
+		},
+		about: {
+			header: "Пра мяне",
+			textblocks: {
+				1: "Вітаю! Я Уладзіслаў Назароў, таксама вядомы як ElCaptain або John. Я праграміст і сістэмны адміністратар з больш чым шасцю гадамі досведу. З 2018 года ствараю розныя пет-праекты: сістэмы аўтаматызацыі ўсталявання Linux, Telegram-ботаў для інтэграцыі з сістэмамі відэаназірання, а таксама вэб-праграмы. Найчасцей працую з Python, C, Bash Script і люблю вывучаць такія інструменты, як Ansible, Docker, Podman і Proxmox.",
+				2: "Цяпер я працую DevOps-інжынерам у Deloitte, дзе адказваю за забеспячэнне і падтрымку праектаў з боку DevOps. Я падтрымліваю праектныя асяроддзі ў Azure DevOps і падобных платформах, наладжваю і тэстую CI/CD-пайплайны, а таксама распрацоўваю стратэгіі Git Flow. Акрамя таго, я дапамагаю з адаптацыяй новых супрацоўнікаў і яе аўтаматызацыяй, ствараю тэхнічную дакументацыю і працую над карыснымі пабочнымі праектамі, звязанымі з DevOps.",
+				3: "У вольны час я вучуся граць на гітары, ствараю новыя пет-праекты і эксперыментую з тэхналогіямі DevOps. Я маю валанцёрскі досвед у дабрачынных арганізацыях і ўдзельнічаў у студэнцкім самакіраванні, што дапамагло мне развіць арганізацыйныя навыкі і камандны дух."
+			},
+			lang: {
+				header: "Моўныя навыкі",
+				2: {
+					name: "Англійская"
+				},
+				1: {
+					name: "Украінская"
+				},
+				3: {
+					name: "Японская"
+				},
+				4: {
+					name: "Польская"
+				}
+			},
+			work: {
+				header: "Досвед працы",
+				1: {
+					name: "Kyivstar.Tech, LLC",
+					position: "Старшы сістэмны адміністратар",
+					work_time: "Верасень 2025 — Май 2026",
+					list: {
+						1: "Забяспечваць стабільную працу карпаратыўнай інфраструктуры.",
+						2: "Падтрымліваць інфармацыйную сістэму на базе сервераў Windows і Linux, на якіх размешчана B2B CRM Creatio.",
+						3: "Аўтаматызаваць унутраныя запыты і руцінныя аперацыйныя задачы.",
+						4: "Падтрымліваць бяспеку, надзейнасць і бесперапынную даступнасць крытычна важных сістэм.",
+						5: "Кантраляваць і ліквідаваць праблемы кампанентаў інфраструктуры для прадухілення прастояў.",
+						6: "Ствараць скрыпты аўтаматызацыі руціннай працы з дапамогай AI."
+					}
+				},
+				2: {
+					name: "TRC Respublika, LLC",
+					position: "Сістэмны адміністратар",
+					work_time: "Снежань 2024 — Верасень 2025",
+					list: {
+						1: "Распрацаваў з нуля сістэму кіравання інвентарызацыяй з выкарыстаннем PostgreSQL і Appsmith, якая забяспечвае цэнтралізаваны ўлік даных.",
+						2: "Аўтаматызаваў руцінныя адміністрацыйныя задачы з дапамогай скрыптоў на Python і PowerShell.",
+						3: "Адміністраваў серверную інфраструктуру на Windows Server, уключаючы MS Exchange і Active Directory DS.",
+						4: "Укараніў сістэму маніторынгу Zabbix для праактыўнага кантролю ключавых сервераў і сеткавых прылад.",
+						5: "Кіраваў сеткавай інфраструктурай на базе MikroTik і TP-Link і наладжваў абсталяванне.",
+						6: "Аптымізаваў падрыхтоўку працоўных месцаў з дапамогай універсальнага вобраза Windows для хуткага разгортвання."
+					}
+				},
+				3: {
+					name: "Кіеўскі прафесійны каледж сувязі",
+					position: "Сістэмны/сеткавый адміністратар",
+					work_time: "Кастрычнік 2023 — Снежань 2024",
+					list: {
+						1: "Адміністраваў больш за 200 камп'ютараў на базе GNU/Linux і Windows.",
+						2: "Разгортваў і падтрымліваў віртуальныя машыны на Proxmox, а таксама сэрвісы з выкарыстаннем Docker і Podman.",
+						3: "Наладзіў кіраванне кантэйнерамі з дапамогай Portainer.",
+						4: "Аўтаматызаваў працу з абсталяваннем з дапамогай Ansible.",
+						5: "Разгарнуў Active Directory на Windows Server для цэнтралізаванага кіравання карыстальнікамі і наладзіў групавыя палітыкі.",
+						6: "Забяспечваў стабільную працу састарэлага апаратнага і праграмнага забеспячэння."
+					}
+				},
+				4: {
+					name: "Deloitte CE",
+					position: "Middle DevOps-інжынер",
+					work_time: "Май 2026 — Жнівень 2026",
+					list: {
+						1: "Аўтаматызаваў лакальныя разгортванні Creatio.",
+						2: "Распрацаваў стратэгію Git Flow для праекта.",
+						3: "Распрацаваў CI/CD-пайплайны ў Azure DevOps і Jenkins.",
+						4: "Працаваў над укараненнем эфемернага тэставага асяроддзя AWS з Terraform і Packer.",
+						5: "Стварыў падрабязную дакументацыю для праектаў.",
+						6: "Падрыхтаваў інструкцыі па адаптацыі для новых распрацоўшчыкаў."
+					}
+				}
+			},
+			showcase: {
+				header: "Вітрына вед",
+				dev: {
+					header: "Стэк распрацоўшчыка"
+				},
+				sysadmin: {
+					header: "Стэк DevOps/сістэмнага адміністратара"
+				}
+			}
+		},
+		footer: {
+			title: {
+				1: "Крыніцы",
+				2: "Апошнія праекты",
+				3: "Гэты праект",
+				4: "Кантакты"
+			}
+		}
 	}
 };
 
@@ -692,7 +847,8 @@ const mapping = {
     'en': 'en',
     'ja': 'jp',
     'uk': 'ua',
-	'pl': 'pl'
+    'pl': 'pl',
+    'be': 'by'
 };
 
 const i18n = createI18n({
