@@ -145,20 +145,18 @@ header {
     box-sizing: border-box;
     
     .background-image {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
         background-image: url('../static/img1.jpg');
         background-color: black;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed;
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: 0;
-        display: block;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100dvh;
         filter: brightness(0.7);
+        pointer-events: none;
     }
 
     .hello-world {
@@ -779,7 +777,6 @@ footer {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap: 10px;
 	z-index: 1;
 
     .categories-block {
@@ -868,7 +865,7 @@ footer {
         .categories-block {
             width: 100%;
             flex-direction: column;
-            gap: 50px;
+            gap: 25px;
             align-items: center;
         }
 
